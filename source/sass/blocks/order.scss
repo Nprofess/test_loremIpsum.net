@@ -1,0 +1,28 @@
+.order {
+ background-color: $dark-grey;
+ background-image: url("../../img/pattern-grey.png");
+ color: $basic-white;
+ padding-top: 121px;
+ padding-bottom: 151px;
+ text-align: center;
+}
+
+.order__title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 43px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.order__subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $small-text;
+  margin: 0;
+  margin-bottom: 72px;
+}
+
+

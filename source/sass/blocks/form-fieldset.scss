@@ -1,0 +1,33 @@
+.form-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 2fr 370px;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-fieldset__container-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 50px;
+}
+
+.form-fieldset__text {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.form-fieldset__range-result {
+  align-self: center;
+}
+
+

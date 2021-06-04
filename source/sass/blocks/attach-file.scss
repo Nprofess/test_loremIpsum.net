@@ -1,0 +1,29 @@
+
+.attach-file__button {
+  display: grid;
+  grid-template-columns: max-content auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: $dark-grey;
+  text-transform: uppercase;
+  background-color: $basic-white;
+  padding: 16px 10px 12px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.attach-file__icon {
+  fill: $dark-grey;
+  margin-right: 10px;
+}
+
+.attach-file__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

@@ -1,0 +1,32 @@
+.main-nav {
+  font-weight: 600;
+  color: $basic-white;
+
+  @media (max-width: $minWidth) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 60px;
+  align-items: center;
+  width: 770px;
+}
+
+.main-nav__link {
+  color: $basic-white;
+  text-transform: uppercase;
+  padding: 20px 0 20px 0;
+  min-height: 100px;
+}
+
+.main-nav__link--is-active {
+  color: $link-is-active;
+}

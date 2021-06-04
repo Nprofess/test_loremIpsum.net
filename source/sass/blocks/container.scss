@@ -1,0 +1,18 @@
+.container {
+  // @media (max-width: $minWidth) {
+  //   width: $minWidth;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+
+  @media (min-width: $tabletWidth) {
+    max-width: $tabletWidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: $maxWidthContainer;
+  }
+
+}

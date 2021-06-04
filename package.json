@@ -1,0 +1,56 @@
+{
+  "name": "test_loremipsum.net",
+  "version": "1.0.0",
+  "description": "Тестовое задание",
+  "main": "index.html",
+  "scripts": {
+    "editorconfig": "editorconfig",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nprofess/test_loremIpsum.net.git"
+  },
+  "author": "Nprofess",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nprofess/test_loremIpsum.net/issues"
+  },
+  "homepage": "https://github.com/Nprofess/test_loremIpsum.net#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "editorconfig": "^0.15.3",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.0.1",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.0",
+    "postcss-csso": "^5.0.1",
+    "stylelint": "^13.13.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.scss"
+  ]
+}

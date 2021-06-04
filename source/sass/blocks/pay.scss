@@ -1,0 +1,42 @@
+.pay__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  width: 391px;
+}
+
+.pay__item {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 13px;
+  max-width: 118px;
+}
+
+.pay__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  align-self: flex-end;
+}
+
+.pay__icon {
+  fill: $basic-blue;
+  align-self: center;
+}
+
+.pay__icon-point {
+  fill: $basic-black;
+}
+
+// .pay__icon g {
+//   fill: $basic-blue;
+// }
+
