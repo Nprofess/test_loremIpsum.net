@@ -1,29 +1,74 @@
+.attach-file {
+  @media (max-width: $mediaLarge) {
+    min-width: em(300, $fz);
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.attach-file__button {
-  display: grid;
-  grid-template-columns: max-content auto;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
-  color: $dark-grey;
-  text-transform: uppercase;
-  background-color: $basic-white;
-  padding: 16px 10px 12px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
+  @media (max-width: $mediaLarge) {
+    min-width: em(200, $fz);
+  }
 
-.attach-file__icon {
-  fill: $dark-grey;
-  margin-right: 10px;
-}
+  &__button {
+    $fz: 15;
+    font-size: em($fz, $fz_base);
+    line-height: em(18, $fz);
+    display: grid;
+    grid-template-columns: max-content auto;
+    font-family: "Lato", sans-serif;
+    min-height: em(48, $fz);
+    font-weight: 600;
+    color: $dark-grey;
+    text-transform: uppercase;
+    background-color: $white;
+    padding: em(12 10 12, $fz);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #3E9CDC;
+    border-radius: 3px;
 
-.attach-file__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+    @media (max-width: $mediaLarge) {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(16, $fz);
+      min-height: em(45, $fz);
+    }
+
+    @media (max-width: $mediaMedium) {
+      min-height: em(40, $fz);
+      padding: em(8 6 8, $fz);
+      $fz: 13;
+      font-size: em($fz, $fz_base);
+      line-height: em(18, $fz);
+    }
+
+    &:hover {
+      background-color: $dark-grey;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: rgba(61, 64, 80, 0.85);
+      color: $white;
+    }
+
+    &:hover svg {
+      fill: currentColor;
+    }
+  }
+
+  &__icon {
+    fill: $dark-grey;
+    margin-right: 10px;
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
 }

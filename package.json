@@ -52,5 +52,8 @@
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
-  ]
+  ],
+  "dependencies": {
+    "simplebar": "^5.3.3"
+  }
 }

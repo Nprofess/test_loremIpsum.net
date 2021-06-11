@@ -1,7 +1,11 @@
+$fz_base: 16;
+$fz: $fz_base;
+
+
 // Color
-$basic-black: #000000;
-$basic-blue: #3E9CDC;
-$basic-white: #FFFFFF;
+$black: #000000;
+$accent: #3E9CDC;
+$white: #FFFFFF;
 $dark-grey: #272733;
 $border: #286690;
 $back-input: rgba(255, 255, 255, 0.85);
@@ -15,11 +19,13 @@ $border-details:#6F6D7B;
 $small-text:#BBBBBB;
 $color-range:rgba(255, 255, 255, 0.7);
 $control-range: #42A9ED;
+$color-pay: #C3C3C3;
 
 
 //Sizes
-$maxWidthContainer: 1172px;
-$maxWidth: 1920px;
-$minWidth: 320px;
-$tabletWidth:768px;
+$mediaLargeContainer: 1172px;
+$mediaLarge: 1230px;
+$mediaMedium:768px;
+$mediaSmall: 500px;
+
 

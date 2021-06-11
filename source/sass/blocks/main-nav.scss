@@ -1,32 +1,95 @@
 .main-nav {
+  $self: &;
   font-weight: 600;
-  color: $basic-white;
-
-  @media (max-width: $minWidth) {
-    display: none;
-  }
-}
-
-.main-nav__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  color: $white;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  column-gap: 60px;
-  align-items: center;
-  width: 770px;
-}
 
-.main-nav__link {
-  color: $basic-white;
-  text-transform: uppercase;
-  padding: 20px 0 20px 0;
-  min-height: 100px;
-}
+  &__container {
+    @media (max-width: $mediaMedium) {
+      position: fixed;
+      top: em(68, $fz);
+      right: 0;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      padding-top: em(20, $fz);
+      padding-bottom: em(20, $fz);
+      overflow: auto;
+      background-color: rgba($back-header, 0.9);
+      color: $black;
 
-.main-nav__link--is-active {
-  color: $link-is-active;
+      #{$self}--is-open & {
+        z-index: 200;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__list {
+    min-height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    width: em(770, $fz);
+
+    & li:nth-of-type(n+2) {
+      margin-left: em(40, $fz);
+
+      @media (max-width: $mediaLarge) {
+        margin-left: em(10, $fz);
+      }
+      @media (max-width: $mediaMedium) {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: $mediaLarge) {
+      width: em(368, $fz);
+    }
+
+    @media (max-width: $mediaMedium) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: auto;
+
+    }
+  }
+
+  &__link {
+    $fz: 13;
+    font-size: em($fz, $fz_base);
+    line-height: em(16, $fz);
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-transform: uppercase;
+    padding: em(15 0 10 21, $fz);
+    min-height: 100px;
+
+    &--is-active {
+      color: $link-is-active;
+    }
+
+    &:hover, &:focus {
+      color: $accent;
+    }
+
+    @media (max-width: $mediaMedium) {
+      padding: em(10 10 10 10, $fz);
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @media (max-width: $mediaMedium) {
+      display: flex;
+    }
+  }
 }

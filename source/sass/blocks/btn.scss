@@ -1,0 +1,30 @@
+.btn {
+  $fz: 13px;
+  font-size: em($fz, $fz_base);
+  line-height: em(16, $fz);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  min-height: em(43, $fz);
+  color: $white;
+  text-align: center;
+  background-color: $accent;
+  border: none;
+  border: 1px solid $white;
+  text-transform: uppercase;
+  border-radius: em(4, $fz);
+  cursor: pointer;
+
+  @media (max-width: $mediaLarge) {
+    min-height: em(38, $fz);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $accent;
+    border-color: currentColor;
+  }
+}

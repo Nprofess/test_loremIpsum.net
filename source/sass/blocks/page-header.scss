@@ -1,8 +1,16 @@
 .page-header {
-  padding: 42px 0 34px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
-  line-height: 16px;
+
+  @media (max-width: $mediaMedium) {
+    min-height: 70px;
+  }
+
+  &__logo {
+    display: flex;
+    @media (max-width: $mediaLarge) {
+      flex: none;
+    }
+  }
 }

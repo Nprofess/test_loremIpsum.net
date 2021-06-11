@@ -1,10 +1,15 @@
 .copyright {
+  $fz: 13;
   display: block;
   align-self: center;
   padding: 0;
   margin: 0;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: em($fz, $fz_base);
+  line-height: em(16, $fz);
 
+  @media (max-width: $mediaLarge) {
+  justify-self: center;
+  padding: em(20 10, $fz);
+  }
 }

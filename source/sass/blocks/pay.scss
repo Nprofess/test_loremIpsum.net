@@ -1,42 +1,63 @@
-.pay__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: max-content max-content max-content;
-  justify-content: space-between;
-  align-items: center;
-  gap: 38px;
-  width: 391px;
-}
+.pay {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 
-.pay__item {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: max-content auto;
-  column-gap: 13px;
-  max-width: 118px;
-}
+    // grid-template-columns: repeat(auto-fill,minmax(#{em(115, $fz)}, 1fr));
+    // grid-template-columns: max-content max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    // column-gap: em(15,$fz);
+    // row-gap: em(38,$fz);
+    width: em(391,$fz);
 
-.pay__text {
-  margin: 0;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  align-self: flex-end;
-}
+    @media (max-width: $mediaLarge) {
+      width: em(500,$fz);
+      grid-template-columns: max-content max-content max-content;
+      gap: em(20, $fz);
+      justify-self: center;
+      padding: em(20 10, $fz);
+    }
 
-.pay__icon {
-  fill: $basic-blue;
-  align-self: center;
-}
+    @media (max-width: $mediaMedium) {
+      padding: em(20 30, $fz);
+    }
+  }
 
-.pay__icon-point {
-  fill: $basic-black;
-}
+  &__item {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: em(13,$fz);
+    max-width: em(118,$fz);
+    cursor: pointer;
+    &:hover{
+      color: $accent;
 
-// .pay__icon g {
-//   fill: $basic-blue;
-// }
+      & svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &__text {
+    $fz: 13;
+    margin: 0;
+    font-weight: 400;
+    font-size: em($fz, $fz_base);
+    line-height: em(16,$fz);
+    align-self: flex-end;
+    color: $color-pay;
+  }
+
+  &__icon {
+    fill: $accent;
+    align-self: center;
+    color: $black;
+  }
+}
 

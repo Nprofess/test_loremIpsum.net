@@ -1,0 +1,153 @@
+.select {
+  $fz: 18;
+  box-sizing: border-box;
+  position: relative;
+  text-align: start;
+  border-radius: 3px;
+  background-color: $back-input;
+  border: 1px solid $white;
+  color: $dark-grey;
+  cursor: pointer;
+  width: em(370, $fz);
+  min-height: em(48, $fz);
+
+  @media (max-width: $mediaLarge) {
+    $fz: 16;
+    font-size: em($fz, $fz_base);
+    line-height: em(20, $fz);
+    width: em(300, $fz);
+  }
+
+  &__box {
+    $fz: 18;
+    font-size: em($fz, $fz_base);
+    display: flex;
+    width: em(370, $fz);
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+
+    @media (max-width: $mediaLarge) {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(20, $fz);
+      width: em(300, $fz);
+    }
+  }
+
+  &__options-container{
+    background: rgba(39, 39, 51, 0.9);
+    color: $white;
+    border: 1px solid #3D4050;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 3px;
+    overflow: hidden;
+    order: 1;
+  }
+
+  &__option {
+    $fz: 18;
+    display: flex;
+    width: em(370, $fz);
+    flex-direction: column;
+
+    @media (max-width: $mediaLarge) {
+      width: em(300, $fz);
+    }
+  }
+
+  &__label {
+    $fz: 18;
+    min-height: em(30, $fz);
+    width: em(370, $fz);
+    cursor: pointer;
+    text-align: start;
+    padding: em(12 24 0 10, $fz);
+
+    @media (max-width: $mediaLarge) {
+      min-height: em(25, $fz);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: em(10, $fz);;
+    height: em(10, $fz);;
+    position: absolute;
+    right: em(15, $fz);;
+    top: 45%;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-left-color: currentColor;
+    transform: translateY(-50%) translateX(-50%) rotate(225deg);
+    border-radius: 2px;
+    transition: all 0.4s;
+  }
+
+  &:focus {
+    background-color: rgba(61, 64, 80, 0.85);
+    color: $white;
+    border: none;
+  }
+}
+
+.select__box .select__option {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.select__box .select__option:hover {
+  color: #42A9ED;
+}
+
+
+.select__box .select__option .radio {
+  display: none;
+}
+
+.select__options-container.active {
+  $fz: 18;
+  max-height: em(180, $fz);
+  opacity: 1;
+  overflow-y: scroll;
+  @media (max-width: $mediaLarge) {
+    $fz: 16;
+    max-height: em(150, $fz);
+  }
+}
+
+.select__options-container::-webkit-scrollbar {
+  display: none;
+}
+
+.simplebar-track.simplebar-vertical {
+  $fz: 18;
+  width: em(7, $fz);
+  background: #3D4050;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  margin-right: 4px;
+}
+
+.simplebar-scrollbar:before {
+  background: #3E9CDC;
+  border-radius: 3px;
+  left: 0;
+  right: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+}

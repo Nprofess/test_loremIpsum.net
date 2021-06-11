@@ -1,7 +1,9 @@
-.text-setting__color {
-  color: $basic-blue;
-}
+.text-setting {
+  &__color {
+    color: $accent;
+  }
 
-.text-setting__uppercase {
-  text-transform: uppercase;
+  &__uppercase {
+    text-transform: uppercase;
+  }
 }
