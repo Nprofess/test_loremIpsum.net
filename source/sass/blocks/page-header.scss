@@ -9,6 +9,7 @@
 
   &__logo {
     display: flex;
+    // зачем в медиазапрос?
     @media (max-width: $mediaLarge) {
       flex: none;
     }

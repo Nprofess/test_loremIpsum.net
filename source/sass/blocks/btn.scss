@@ -1,16 +1,20 @@
 .btn {
+  // не задавать блокам размер шрифта если верстка в em
   $fz: 13px;
   font-size: em($fz, $fz_base);
   line-height: em(16, $fz);
   display: flex;
   align-items: center;
   justify-content: center;
+  // можно в переменную
   font-family: "Lato", sans-serif;
+  // а дефолтный какой?
   font-weight: 400;
   min-height: em(43, $fz);
   color: $white;
   text-align: center;
   background-color: $accent;
+  // дублирование
   border: none;
   border: 1px solid $white;
   text-transform: uppercase;

@@ -7,8 +7,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    // забыть это свойство
     width: em(311, $fz);
 
+    // что за селектор?
     &li:nth-of-type(2n) {
       justify-self: flex-end;
     }
@@ -22,6 +25,8 @@
       width: em(400, $fz);
       padding: em(20 30, $fz);
       justify-content: center;
+
+      // ой ой ой
       & li:nth-child(n):not(:nth-last-child(1)) {
         margin-right: 20px;
       }
@@ -36,9 +41,11 @@
     padding: 0;
     display: flex;
     align-content: flex-end;
+    // почему?
     max-width: em(147, $fz);
     cursor: pointer;
 
+    // ай ай ай
     &:hover svg {
       fill: $white;
     }
@@ -49,6 +56,7 @@
     word-break: break-all;
     display: inline-block;
     color: $white;
+    // уй уй уй
     font-weight: 400;
     font-size: em($fz, $fz_base);
     line-height: em(16, $fz);
