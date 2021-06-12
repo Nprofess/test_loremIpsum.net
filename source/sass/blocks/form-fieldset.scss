@@ -3,17 +3,23 @@
   margin: 0;
   padding: 0;
   display: grid;
+  // не очень удачная разметка
   grid-template-columns: 2fr em(370, $fz);
+  // сократить
   column-gap: em(30, $fz);
   row-gap: em(30, $fz);
+  // левые свойства
   justify-content: space-between;
   align-items: flex-start;
 
   @media (max-width: $mediaLarge) {
     grid-template-columns: 1fr;
+
+    // лишнее
     grid-template-rows: 1fr 1fr;
   }
 
+  // вынести инпуты разных типов в свои блоки
   &__container-text {
     display: flex;
     justify-content: space-between;
@@ -28,6 +34,7 @@
     text-align: start;
     font-size: em($fz, $fz_base);
     line-height: em(22, $fz);
+    // лишнее
     font-weight: 400;
   }
 

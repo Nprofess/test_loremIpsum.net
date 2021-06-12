@@ -1,6 +1,7 @@
 .page-footer {
   background-color: $back-footer;
   color: $white;
+  // не задавать то что не надо
   padding: em(29 0 30 0, $fz);
 
   @media (max-width: $mediaLarge) {
@@ -16,6 +17,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     gap: em(82, $fz);
+    // и так задано, только перебито
     margin-left: auto;
     margin-right: auto;
 
@@ -33,11 +35,13 @@
   }
 }
 
+// унутрь, дублирование
 .page-footer__item:nth-of-type(3n-2):before {
   content: "";
   position: absolute;
   display: block;
   width: 1px;
+  // em
   height: 18px;
   background: $color-pay;
   top: 0;

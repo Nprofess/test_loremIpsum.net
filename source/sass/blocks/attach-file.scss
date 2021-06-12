@@ -1,6 +1,8 @@
 .attach-file {
   @media (max-width: $mediaLarge) {
     min-width: em(300, $fz);
+
+    // стили элемента
     margin-left: auto;
     margin-right: auto;
   }
@@ -54,6 +56,7 @@
       color: $white;
     }
 
+    // класс? почему тег?
     &:hover svg {
       fill: currentColor;
     }
@@ -65,6 +68,7 @@
   }
 
   &__input {
+    // у тебя же есть visually-hidden, зачем дублировать? можно заинклудить тут, лиюо дать класс в разметке
     position: absolute;
     width: 1px;
     height: 1px;

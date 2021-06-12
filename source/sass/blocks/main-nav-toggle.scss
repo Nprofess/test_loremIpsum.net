@@ -6,9 +6,11 @@
   &__bar {
     position: absolute;
     top: 50%;
+    // откуда 13? и лучше всегда через $fz
     right: em(15, 13);
     width: em(20, 13);
     height: 3px;
+    // почему не в em?
     margin-top: -9px;
     border-radius: 1px;
     background: currentColor;
@@ -20,10 +22,12 @@
   }
 
   &__bar + &__bar + &__bar {
+    // em?
     margin-top: 7px;
   }
 
   &--is-toggled &__bar {
+    // em?
     transform: rotate(45deg) translateX(7px) translateY(4px);
   }
 
@@ -34,6 +38,7 @@
 
   &--is-toggled &__bar + &__bar + &__bar {
     opacity: 1;
+    // em?
     transform: rotate(-45deg) translateX(7px) translateY(-4px);
   }
 }

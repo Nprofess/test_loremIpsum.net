@@ -8,6 +8,7 @@
     row-gap: em(10, $fz);
     justify-content: space-between;
     align-items: flex-start;
+    // не отсюда
     margin-bottom: em(85, $fz);
 
     @media (max-width: $mediaLarge) {
@@ -27,9 +28,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    // em
     border: 5px solid $border;
     border-radius: 50%;
     margin-bottom: em(10, $fz);
+    // em
     margin-top: 8px;
 
     @media (max-width: $mediaLarge) {
@@ -52,6 +55,7 @@
   }
 
   &__icon {
+    // красить цветом текста
     fill: $white;
     @media (max-width: $mediaMedium) {
       width: em(36, $fz);
@@ -68,6 +72,7 @@
     line-height: em(19, $fz);
     text-align: center;
     margin: 0;
+    // em
     margin-top: 9px;
 
     @media (max-width: $mediaMedium) {
@@ -78,6 +83,11 @@
   }
 }
 
+.order-scheme-icon {
+  //  TODO
+}
+
+// перенести на место, и не стилизовать по тегам, и ниже всё
 .order-scheme__list li::before{
   content: "";
   position: absolute;

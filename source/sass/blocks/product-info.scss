@@ -1,10 +1,13 @@
 .product-info {
   min-height: em(750, $fz);
+  // сократить
   background-image: url("../../img/back-sec1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  // цвет текста лучше тут
   background-color: $back-info;
+  // лучше не задавать лишние стили
   padding: em(107 0 103 0, $fz);
 
   @media (max-width: $mediaLarge) {
@@ -20,14 +23,19 @@
 
   &__title {
     $fz: 48;
+    // зач?
     display: block;
     font-weight: 700;
+
+    // наследовать
     color: $black;
     font-size: em($fz, $fz_base);
     line-height: em(58, $fz);
     text-transform: uppercase;
+    // дубль
     margin: 0;
     margin-bottom: em(90, $fz);
+    // общему блоку, а не каждому
     max-width: em(780, $fz);
 
     @media (max-width: $mediaLarge) {
@@ -49,6 +57,7 @@
 
   &__subtitle {
     $fz: 20;
+    // ?
     display: block;
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
@@ -71,6 +80,7 @@
   }
 
   &__list {
+    // ?
     display: block;
     max-width: em(780, $fz);
     list-style: none;
@@ -90,6 +100,7 @@
 
   &__text {
     $fz: 20;
+    // ??
     font-weight: 400;
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
@@ -111,6 +122,7 @@
 
     &::before {
       content: "";
+      // Избавиться от абсолютной позиции
       position: absolute;
       display: inline-block;
       height: em(1, $fz);
@@ -122,9 +134,11 @@
   }
 
   &__button-order {
+    // дубль стилей
     $fz: 13px;
     font-size: em($fz, $fz_base);
     line-height: em(17, $fz);
+    // это лишнее
     padding: em(11 31 10 31, $fz);
     min-width: em(183, $fz);
 
@@ -134,6 +148,8 @@
   }
 
   &__details {
+    // вынести в модификатор .btn с какой-нибудь темой
+    // убрать отсюда лишнее и объединить селекторы
     $fz: 13px;
     font-size: em($fz, $fz_base);
     line-height: em(17, $fz);
@@ -156,13 +172,13 @@
     @media (max-width: $mediaMedium) {
       min-width: em(150, $fz);
     }
-
   }
 
   &__button-container {
     display: flex;
     flex-wrap: wrap;
     max-width: em(780, $fz);
+    // плохо поддерживаемое свойство
     row-gap: em(30, $fz);
     column-gap: em(30, $fz);
 

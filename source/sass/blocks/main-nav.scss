@@ -1,11 +1,14 @@
 .main-nav {
   $self: &;
+  // текст лучше стилизовать в конкретном месте
   font-weight: 600;
+  // дефолтный цвет текста лучше задавать там же где фон
   color: $white;
   display: flex;
 
   &__container {
     @media (max-width: $mediaMedium) {
+      // Фиксирована должна быть вся шапка, косяк при скролле
       position: fixed;
       top: em(68, $fz);
       right: 0;
@@ -25,29 +28,35 @@
     }
   }
 
-  &__list {
+  &__list  {
     min-height: 100%;
+    // убрать везде после подключения ресета
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    // лишнее
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
+    // Ширину - нахрен + она относится к навигации в шапке
     width: em(770, $fz);
 
+    // во-первых & писать смысла нет, во-вторых не надо каскада, вынести из &__list, в-третьих - не стилизовать по тегу
     & li:nth-of-type(n+2) {
       margin-left: em(40, $fz);
 
       @media (max-width: $mediaLarge) {
         margin-left: em(10, $fz);
       }
+
       @media (max-width: $mediaMedium) {
         margin: 0;
       }
     }
 
     @media (max-width: $mediaLarge) {
+      // убрать
       width: em(368, $fz);
     }
 
@@ -57,7 +66,6 @@
       justify-content: center;
       text-align: center;
       width: auto;
-
     }
   }
 
@@ -67,9 +75,12 @@
     line-height: em(16, $fz);
     display: flex;
     align-items: center;
+    // лишний цвет
     color: $white;
     text-transform: uppercase;
+    // несимметричные отступы
     padding: em(15 0 10 21, $fz);
+    // em?
     min-height: 100px;
 
     &--is-active {
@@ -81,6 +92,7 @@
     }
 
     @media (max-width: $mediaMedium) {
+      // сократить
       padding: em(10 10 10 10, $fz);
     }
   }

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LoremIpsum.Net</title>
+    <!--  Скачать и подключить себе  -->
     <link rel="stylesheet"  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" crossorigin="anonymous" href="fonts/lato-bold.woff2" as="font">
@@ -12,60 +13,68 @@
     <link rel="preload" crossorigin="anonymous" href="fonts/lato-semibold.woff2" as="font">
   </head>
   <body class="page__body">
+      <!--sticky-->
       <header class="page__header">
         <div class="container page-header">
+          <!--ссылка, табиндекс убрать-->
           <img class="page-header__logo" src="img/logo.svg" alt="Логотип сайта" width="247" height="35" tabindex="0">
               <nav class="main-nav main-nav--closed">
-              <buttton type="button" class="main-nav__toggle main-nav-toggle">
-                <span class="main-nav-toggle__bar"></span>
-                <span class="main-nav-toggle__bar"></span>
-                <span class="main-nav-toggle__bar"></span>
-            </buttton>
-          <div class="main-nav__container">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--is-active" href="#">Бизнес</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">О нас</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Цены</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="#">Оформить заказ</a>
-                </li>
-              </ul>
-            </div>
+                <!-- buttttttttttttttttttttton, title, aria-label -->
+                <buttton type="button" class="main-nav__toggle main-nav-toggle">
+                  <span class="main-nav-toggle__bar"></span>
+                  <span class="main-nav-toggle__bar"></span>
+                  <span class="main-nav-toggle__bar"></span>
+                </buttton>
+                <div class="main-nav__container">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                      <a class="main-nav__link main-nav__link--is-active" href="#">Бизнес</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">О нас</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Цены</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Оформить заказ</a>
+                    </li>
+                  </ul>
+                </div>
             </nav>
         </div>
       </header>
+      <!--Непонятный класс-->
       <main class="page-main">
         <section class="product-info">
           <div class="container">
-          <h1 class="product-info__title"><span class="text-setting__color">Lorem ipsum</span> dolor sit ametconsectetur <span class="text-setting__color">adipiscing</span></h1>
-          <p class="product-info__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
-          <ul class="product-info__list">
-            <li class="product-info__item">
-              <p class="product-info__text">Totam rem aperiam eaque ipsa</p>
-            </li>
-            <li class="product-info__item">
-              <p class="product-info__text">Sit voluptatem accusantium doloremque laudantium</p>
-            </li>
-            <li class="product-info__item">
-              <p class="product-info__text">Sed ut perspiciatis, unde omnis iste natus error</p>
-            </li>
-          </ul>
-          <div class="product-info__button-container">
-            <button class="product-info__button-order btn" type="button">Заказать</button>
-            <a class="product-info__details btn" href="#">Подробнее</a>
-          </div>
+            <!-- text -->
+            <h1 class="product-info__title"><span class="text-setting__color">Lorem ipsum</span> dolor sit ametconsectetur <span class="text-setting__color">adipiscing</span></h1>
+            <p class="product-info__subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+            <ul class="product-info__list">
+              <li class="product-info__item">
+                <!--Зачем абзац?-->
+                <p class="product-info__text">Totam rem aperiam eaque ipsa</p>
+              </li>
+              <li class="product-info__item">
+                <p class="product-info__text">Sit voluptatem accusantium doloremque laudantium</p>
+              </li>
+              <li class="product-info__item">
+                <p class="product-info__text">Sed ut perspiciatis, unde omnis iste natus error</p>
+              </li>
+            </ul>
+            <!-- странный класс -->
+            <div class="product-info__button-container">
+              <button class="product-info__button-order btn" type="button">Заказать</button>
+              <a class="product-info__details btn" href="#">Подробнее</a>
+            </div>
           </div>
         </section>
         <section class="order">
           <div class="container">
             <h2 class="order__title">Оформление <span class="text-setting__color">заказа</span></h2>
             <p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+            <!-- блок и элемент в одном -->
             <ul class="order-scheme order-scheme__list">
               <li class="order-scheme__item">
                 <div class="order-scheme__icon-container">
@@ -73,7 +82,7 @@
                     <use href="img/sprite.svg#search"></use>
                   </svg>
                 </div>
-
+                <!-- двойной отступ -->
                 <p class="order-scheme__title">Lorem ipsum dolorsit amet</p>
               </li>
               <li class="order-scheme__item">
@@ -109,98 +118,107 @@
                 <p class="order-scheme__title">Excepteur sint occaecat cupidatat non proident</p>
               </li>
             </ul>
+
+            <!-- Подключения скриптов все внизу -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <form class="form" action="https://echo.htmlacademy.ru/" method="GET">
               <div class="form__container">
                 <fieldset class="form__fieldset">
                   <ul class="form__list">
                     <li class="form__item">
+                      <!-- Надо сделать доступным с клавы -->
                       <div class="select form__input" tabindex="0">
-                        <span class="select__text">Выберите тип системы</span> </div>
+                        <span class="select__text">Выберите тип системы</span>
+                      </div>
                       <div class="select__box">
                         <div data-simplebar data-simplebar-auto-hide="false" class="select__options-container">
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
-                              <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
-                              <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
-                            </div>
-                             <div class="select__option">
-                              <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
-                              <label class="select__label" for="Et harum quidem">Et harum quidem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
-                              <label class="select__label" for="Temporibus autem">Temporibus autem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
-                              <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
-                              <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
-                              <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
-                            </div>
-                             <div class="select__option">
-                              <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
-                              <label class="select__label" for="Et harum quidem">Et harum quidem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
-                              <label class="select__label" for="Temporibus autem">Temporibus autem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
-                              <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
-                            </div><div class="select__option">
-                              <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
-                              <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
-                              <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
-                            </div>
-                             <div class="select__option">
-                              <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
-                              <label class="select__label" for="Et harum quidem">Et harum quidem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
-                              <label class="select__label" for="Temporibus autem">Temporibus autem</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
-                              <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
-                            </div>
-                            <div class="select__option">
-                              <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
-                              <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
-                            </div>
-                             <div class="select__option">
-                              <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
-                              <label class="select__label" for="Et harum quidem">Et harum quidem</label>
-                            </div>
+                          <div class="select__option">
+                            <!-- неправильные id -->
+                            <!-- убрать каскады -->
+                            <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
+                            <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
+                            <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
+                            <label class="select__label" for="Et harum quidem">Et harum quidem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
+                            <label class="select__label" for="Temporibus autem">Temporibus autem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
+                            <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
+                            <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
+                            <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
+                            <label class="select__label" for="Et harum quidem">Et harum quidem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
+                            <label class="select__label" for="Temporibus autem">Temporibus autem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
+                            <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Sed ut perspiciatis" name="type" value="Sed ut perspiciatis"/>
+                            <label class="select__label" for="Sed ut perspiciatis">Sed ut perspiciatis</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
+                            <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
+                            <label class="select__label" for="Et harum quidem">Et harum quidem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Temporibus autem" name="type" value="Temporibus autem"/>
+                            <label class="select__label" for="Temporibus autem">Temporibus autem</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Itaque earum rerum" name="type" value="Itaque earum rerum"/>
+                            <label class="select__label" for="Itaque earum rerum">Itaque earum rerum</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Nemo enim ipsam" name="type" value="Nemo enim ipsam"/>
+                            <label class="select__label" for="Nemo enim ipsam">Nemo enim ipsam</label>
+                          </div>
+                          <div class="select__option">
+                            <input type="radio" class="radio" id="Et harum quidem" name="type" value="Et harum quidem"/>
+                            <label class="select__label" for="Et harum quidem">Et harum quidem</label>
+                          </div>
                         </div>
                       </div>
                     </li>
                     <li class="form__item">
                       <label for="e-mail" class="visually-hidden">Ваш e-mail</label>
+                      <!-- некорректный type -->
                       <input class="form__input" name="e-mail" type="e-mail" id="e-mail" placeholder="Ваш e-mail">
                     </li>
                     <li class="form__item">
-                    <label for="name" class="visually-hidden">Ваше имя</label>
-                    <input class="form__input" name="name" type="text" id="name" placeholder="Ваше имя">
+                      <label for="name" class="visually-hidden">Ваше имя</label>
+                      <input class="form__input" name="name" type="text" id="name" placeholder="Ваше имя">
                     </li>
                   </ul>
                 </fieldset>
                 <fieldset class="form__fieldset form-fieldset">
                   <div class="form-fieldset__container">
+                    <!-- Повеселее дробить на блоки -->
                     <label class="form__label-range" for="range">
                       <div class="form-fieldset__container-text">
                         <span class="form__label-text">Sed ut perspiciatis, unde omnis iste natus</span>
@@ -210,6 +228,7 @@
                     </label>
                   </div>
                   <div class="attach-file attach-file__container">
+                    <!-- С клавы, два for -->
                     <label for="file" class="attach-file__button" for="file" tabindex="0">
                       <svg class="attach-file__icon" width="17" height="20">
                         <use href="img/sprite.svg#file"></use>
@@ -217,22 +236,27 @@
                       <span>Прикрепить файл</span>
                     </label>
                   </div>
-                    <input class="attach-file__input" id="file" style="visibility:hidden;" name="userfile" accept="image/*,.jpg,.pdf,.doc." type="file">
+                  <!-- поч не .visually-hidden? -->
+                  <input class="attach-file__input" id="file" style="visibility:hidden;" name="userfile" accept="image/*,.jpg,.pdf,.doc." type="file">
                 </fieldset>
               </div>
-            <button class="form__button-submit btn" type="submit">Отправить</button>
+              <button class="form__button-submit btn" type="submit">Отправить</button>
             </form>
           </div>
         </section>
       </main>
       <footer class="page-footer">
+        <!-- не похоже на список -->
         <ul class="page-footer__list container">
           <li class="page-footer__item">
+            <!-- элемент без блока .copyright__domain , .strong-text -->
             <span class="copyright">© 2018 <span class="text-setting__uppercase">«LoremIpsum.net»</span> Все права защищены.</span>
           </li>
           <li class="page-footer__item">
+            <!-- Блок и элемент в одном теге -->
             <ul class="pay pay__list">
               <li class="pay__item">
+                <!-- либо ссылка либо не кликабельно -->
                 <svg class="pay__icon" width="20" height="20">
                   <use href="img/sprite.svg#qiwi"></use>
                 </svg>
@@ -255,6 +279,7 @@
           <li class="page-footer__item">
             <ul class="contacts contacts__list">
               <li class="contacts__item">
+                <!--Картинка должна быть в ссылке-->
                 <svg class="contacts__icon" width="17" height="12">
                   <use href="img/sprite.svg#mail"></use>
                 </svg>
@@ -271,8 +296,8 @@
       </ul>
       </footer>
       <script src="js/script.min.js"></script>
+      <!-- Подключила и не использовала  -->
       <script src="js/jquery.nav.min.js"></script>
       <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   </body>
 </html>
-
