@@ -1,9 +1,11 @@
 .main-nav {
   $self: &;
   display: flex;
+  // ?
   min-height: em(100, $fz);
   align-items: center;
 
+  // ?
   @media (max-width: $media_medium) {
     min-height: em(80, $fz);
   }

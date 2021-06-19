@@ -133,6 +133,7 @@
       display: none;
     }
 
+    // ?
     &:nth-child(5n-4):not(:nth-child(1)):not(:nth-child(16n))::before {
       @media (max-width: $media_large) {
         display: block;

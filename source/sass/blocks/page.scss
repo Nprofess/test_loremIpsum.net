@@ -10,8 +10,10 @@
     z-index: 100;
     background-color: $back_header;
     color: $white;
+    // ?
     min-height: em(100, $fz);
 
+    // ?
     @media (max-width: $media_medium) {
       min-height: em(70, $fz);
     }

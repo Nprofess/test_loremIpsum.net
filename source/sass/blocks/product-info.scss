@@ -34,6 +34,7 @@
     font-size: em($fz, $fz_base);
     line-height: em(58, $fz);
     font-weight: 700;
+    // ?
     color: inherit;
     text-transform: uppercase;
     margin-bottom: em(90, $fz);
@@ -83,6 +84,7 @@
     $fz: 20;
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
+    // ?
     text-transform: none;
     margin-bottom: em(5, $fz);
 
@@ -119,6 +121,7 @@
 
     @media (max-width: $media_medium) {
       max-width: em(350, $fz);
+      // ?
       row-gap: em(15, $fz);
     }
   }

@@ -1,26 +1,55 @@
 module.exports = {
-  extends: [
-    'stylelint-config-airbnb',
-  ],
   plugins: [
     'stylelint-order',
     'stylelint-scss',
   ],
   rules: {
+    indentation: 2,
+    'at-rule-empty-line-before': [
+      'always',
+      {
+        ignore: [
+          'after-comment',
+        ],
+        except: [
+          'first-nested',
+          'after-same-name',
+        ]
+      },
+    ],
     'at-rule-no-unknown': null,
     'at-rule-no-vendor-prefix': true,
+    'block-opening-brace-space-before': 'always',
     'color-hex-case': 'upper',
+    'comment-empty-line-before': [
+      'always',
+      { except: ['first-nested'] },
+    ],
     'comment-whitespace-inside': 'always',
     'declaration-block-semicolon-newline-after': 'always',
     'declaration-block-trailing-semicolon': 'always',
+    'declaration-colon-space-after': 'always',
+    'declaration-colon-space-before': 'never',
+    'declaration-block-single-line-max-declarations': 1,
+    'declaration-property-value-disallowed-list': {
+      '/^border/': ['none']
+    },
     'font-family-name-quotes': 'always-unless-keyword',
     'font-weight-notation': 'numeric',
     'function-comma-space-after': 'always-single-line',
     'max-nesting-depth': 4,
     'media-feature-name-no-vendor-prefix': true,
     'number-leading-zero': 'always',
-    'property-no-vendor-prefix': true,
-    'rule-empty-line-before': ['always-multi-line',
+    'property-no-vendor-prefix': [
+      true,
+      {
+        ignoreProperties: [
+          'box-orient',
+        ],
+      },
+    ],
+    'rule-empty-line-before': [
+      'always-multi-line',
       {
         except: ['first-nested'],
         ignore: ['after-comment'],
@@ -29,6 +58,7 @@ module.exports = {
     'selector-attribute-quotes': 'always',
     'selector-combinator-space-after': 'always',
     'selector-combinator-space-before': 'always',
+    'selector-list-comma-newline-after': 'always',
     'selector-no-qualifying-type': true,
     'selector-no-vendor-prefix': true,
     'selector-pseudo-element-colon-notation': 'double',
@@ -37,7 +67,6 @@ module.exports = {
     'order/order': [
       [
         'dollar-variables',
-        'custom-properties',
         {
           type: 'at-rule',
           name: 'extend',
@@ -50,20 +79,11 @@ module.exports = {
           type: 'at-rule',
           name: 'mixin',
         },
-        {
-          type: 'at-rule',
-          name: 'include',
-          hasBlock: false,
-        },
+        'custom-properties',
         'declarations',
         {
           type: 'at-rule',
           name: 'media',
-          hasBlock: true,
-        },
-        {
-          type: 'at-rule',
-          name: 'include',
           hasBlock: true,
         },
         'rules',
@@ -371,6 +391,7 @@ module.exports = {
       },
     ],
 
+    'scss/at-extend-no-missing-placeholder': true,
     'scss/at-rule-no-unknown': true,
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-colon-space-after': 'always',
