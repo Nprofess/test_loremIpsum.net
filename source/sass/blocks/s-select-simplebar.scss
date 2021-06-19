@@ -1,0 +1,26 @@
+  .simplebar-track.simplebar-vertical {
+    $fz: 18;
+    width: em(7, $fz);
+    background: $back_footer;
+    border-radius: em(3, $fz);
+    margin-top: em(2, $fz);
+    margin-bottom: em(3, $fz);
+    margin-right: em(4, $fz);
+  }
+
+  .simplebar-scrollbar:before {
+    background: $accent;
+    border-radius: em(3, $fz);
+    left: 0;
+    right: 0;
+  }
+
+  .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+  }
+
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 0;
+    bottom: 0;
+  }
+

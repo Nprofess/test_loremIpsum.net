@@ -9,9 +9,9 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
+// const imagemin = require("gulp-imagemin");
+// const webp = require("gulp-webp");
+// const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 // Styles
@@ -58,34 +58,12 @@ exports.scripts = scripts;
 
 // Images
 
-// const optimizeImages = () => {
-//   return gulp.src("source/img/**/*.{png,jpg,svg}")
-//     .pipe(imagemin([
-//       imagemin.mozjpeg({progressive: true}),
-//       imagemin.optipng({optimizationLevel: 3}),
-//       imagemin.svgo()
-//     ]))
-//     .pipe(gulp.dest("build/img"))
-// }
-
-// exports.images = optimizeImages;
-
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(gulp.dest("build/img"))
 }
 
 exports.images = copyImages;
-
-// WebP
-
-// const createWebp = () => {
-//   return gulp.src("source/img/**/*.{jpg,png}")
-//     .pipe(webp({quality: 90}))
-//     .pipe(gulp.dest("build/img"))
-// }
-
-// exports.createWebp = createWebp;
 
 
 // Sprite
@@ -108,6 +86,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
+    "source/sass/simplebar.min.css",
     // "source/*.webmanifest",
     // "!source/img/sprite/*.svg",
   ], {

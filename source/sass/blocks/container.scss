@@ -3,16 +3,13 @@
   margin-right: auto;
   margin-left: auto;
 
-  @media (max-width: $mediaLarge) {
+  @media (max-width: $media_large) {
     max-width: em(839, $fz);
     padding-left: em(15, $fz);
     padding-right: em(15, $fz);
-    //дубль стилей
-    margin-right: auto;
-    margin-left: auto;
   }
 
-  @media (max-width: $mediaMedium) {
+  @media (max-width: $media_medium) {
     max-width: em(719, $fz);
   }
 }

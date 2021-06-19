@@ -1,14 +1,15 @@
 .main-nav {
   $self: &;
-  // текст лучше стилизовать в конкретном месте
-  font-weight: 600;
-  // дефолтный цвет текста лучше задавать там же где фон
-  color: $white;
   display: flex;
+  min-height: em(100, $fz);
+  align-items: center;
+
+  @media (max-width: $media_medium) {
+    min-height: em(80, $fz);
+  }
 
   &__container {
-    @media (max-width: $mediaMedium) {
-      // Фиксирована должна быть вся шапка, косяк при скролле
+    @media (max-width: $media_medium) {
       position: fixed;
       top: em(68, $fz);
       right: 0;
@@ -18,8 +19,8 @@
       padding-top: em(20, $fz);
       padding-bottom: em(20, $fz);
       overflow: auto;
-      background-color: rgba($back-header, 0.9);
-      color: $black;
+      background-color: rgba($back_header, 0.9);
+      color: $white;
 
       #{$self}--is-open & {
         z-index: 200;
@@ -28,44 +29,29 @@
     }
   }
 
-  &__list  {
+  &__list {
     min-height: 100%;
-    // убрать везде после подключения ресета
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    // лишнее
-    justify-content: flex-end;
     flex-wrap: wrap;
     align-items: center;
-    // Ширину - нахрен + она относится к навигации в шапке
-    width: em(770, $fz);
 
-    // во-первых & писать смысла нет, во-вторых не надо каскада, вынести из &__list, в-третьих - не стилизовать по тегу
-    & li:nth-of-type(n+2) {
-      margin-left: em(40, $fz);
-
-      @media (max-width: $mediaLarge) {
-        margin-left: em(10, $fz);
-      }
-
-      @media (max-width: $mediaMedium) {
-        margin: 0;
-      }
-    }
-
-    @media (max-width: $mediaLarge) {
-      // убрать
-      width: em(368, $fz);
-    }
-
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       width: auto;
+    }
+  }
+
+  &__item:nth-of-type(n + 2) {
+    margin-left: em(40, $fz);
+
+    @media (max-width: $media_large) {
+      margin-left: em(10, $fz);
+    }
+
+    @media (max-width: $media_medium) {
+      margin: 0;
     }
   }
 
@@ -73,35 +59,75 @@
     $fz: 13;
     font-size: em($fz, $fz_base);
     line-height: em(16, $fz);
+    font-weight: 600;
     display: flex;
     align-items: center;
-    // лишний цвет
-    color: $white;
     text-transform: uppercase;
-    // несимметричные отступы
-    padding: em(15 0 10 21, $fz);
-    // em?
-    min-height: 100px;
+    padding: em(40 10, $fz);
 
     &--is-active {
-      color: $link-is-active;
+      color: $link_is_active;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $accent;
     }
 
-    @media (max-width: $mediaMedium) {
-      // сократить
-      padding: em(10 10 10 10, $fz);
+    @media (max-width: $media_medium) {
+      padding: em(20, $fz);
     }
   }
 
   &__toggle {
     display: none;
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       display: flex;
     }
+  }
+}
+
+.main-nav-toggle {
+  position: relative;
+  width: em(60, $fz);
+  height: em(60, $fz);
+
+  @media (max-width: $media_medium) {
+    width: em(70, $fz);
+  }
+
+  &__bar {
+    position: absolute;
+    top: 50%;
+    right: em(15, $fz);
+    width: em(20, $fz);
+    height: em(3, $fz);
+    margin-top: em(-9, $fz);
+    border-radius: em(1, $fz);
+    background: currentColor;
+    transition: all, 0.2s;
+  }
+
+  &__bar + &__bar {
+    margin-top: em(-1, $fz);
+  }
+
+  &__bar + &__bar + &__bar {
+    margin-top: em(7, $fz);
+  }
+
+  &--is-toggled &__bar {
+    transform: rotate(45deg) translateX(em(7, $fz)) translateY(em(4, $fz));
+  }
+
+  &--is-toggled &__bar + &__bar {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  &--is-toggled &__bar + &__bar + &__bar {
+    opacity: 1;
+    transform: rotate(-45deg) translateX(em(7, $fz)) translateY(em(-4, $fz));
   }
 }

@@ -1,34 +1,82 @@
 .btn {
-  // не задавать блокам размер шрифта если верстка в em
-  $fz: 13px;
-  font-size: em($fz, $fz_base);
-  line-height: em(16, $fz);
   display: flex;
   align-items: center;
   justify-content: center;
-  // можно в переменную
-  font-family: "Lato", sans-serif;
-  // а дефолтный какой?
-  font-weight: 400;
   min-height: em(43, $fz);
-  color: $white;
-  text-align: center;
-  background-color: $accent;
-  // дублирование
-  border: none;
-  border: 1px solid $white;
-  text-transform: uppercase;
-  border-radius: em(4, $fz);
   cursor: pointer;
 
-  @media (max-width: $mediaLarge) {
+  @media (max-width: $media_large) {
     min-height: em(38, $fz);
   }
 
-  &:hover,
-  &:focus {
+  &__caption {
+    font-family: $font-family;
+    $fz: 13;
+    font-size: em($fz, $fz_base);
+    line-height: em(16, $fz);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &--theme-accent {
+    color: $white;
+    background-color: $accent;
+    border: em(1, $fz) solid $white;
+    border-radius: em(4, $fz);
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $accent;
+      border-color: currentColor;
+    }
+  }
+
+  &--theme-white {
+    color: $color_details;
     background-color: $white;
-    color: $accent;
-    border-color: currentColor;
+    border: em(1, $fz) solid $border_details;
+    border-radius: em(4, $fz);
+
+    &:hover,
+    &:focus {
+      background-color: $dark_gray;
+      color: $white;
+      border-color: currentColor;
+    }
+  }
+
+  &--size-m {
+    padding: em(11 31 10 31, $fz);
+    min-width: em(183, $fz);
+
+    @media (max-width: $media_medium) {
+      min-width: em(150, $fz);
+    }
+  }
+
+  &--size-l {
+    padding: em(15 18 12, $fz);
+    min-width: em(370, $fz);
+
+    @media (max-width: $media_medium) {
+      padding: em(12 15, $fz);
+    }
+
+    @media (max-width: $media_small) {
+      min-width: em(200, $fz);
+    }
+  }
+
+  &__submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__submit-caption {
+    $fz: 15;
+    font-weight: 600;
+    font-size: em($fz, $fz_base);
+    line-height: em(18, $fz);
   }
 }

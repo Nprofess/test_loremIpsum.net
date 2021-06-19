@@ -1,78 +1,65 @@
 .attach-file {
-  @media (max-width: $mediaLarge) {
-    min-width: em(300, $fz);
-
-    // стили элемента
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (max-width: $mediaLarge) {
-    min-width: em(200, $fz);
-  }
-
   &__button {
-    $fz: 15;
-    font-size: em($fz, $fz_base);
-    line-height: em(18, $fz);
     display: grid;
     grid-template-columns: max-content auto;
-    font-family: "Lato", sans-serif;
     min-height: em(48, $fz);
-    font-weight: 600;
-    color: $dark-grey;
-    text-transform: uppercase;
     background-color: $white;
-    padding: em(12 10 12, $fz);
-    text-align: center;
+    padding: em(5, $fz);
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 2px solid #3E9CDC;
-    border-radius: 3px;
+    border: em(2, $fz) solid #3e9cdc;
+    border-radius: $border_radius;
+    color: $dark_gray;
+    margin-left: auto;
+    margin-right: auto;
 
-    @media (max-width: $mediaLarge) {
-      $fz: 14;
-      font-size: em($fz, $fz_base);
-      line-height: em(16, $fz);
+    @media (max-width: $media_large) {
       min-height: em(45, $fz);
+      max-width: 70%;
     }
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       min-height: em(40, $fz);
-      padding: em(8 6 8, $fz);
-      $fz: 13;
-      font-size: em($fz, $fz_base);
-      line-height: em(18, $fz);
+      padding: em(8 6, $fz);
     }
 
     &:hover {
-      background-color: $dark-grey;
+      background-color: $dark_gray;
       color: $white;
     }
 
-    &:focus {
-      background-color: rgba(61, 64, 80, 0.85);
-      color: $white;
-    }
-
-    // класс? почему тег?
-    &:hover svg {
+    &:hover &__icon {
       fill: currentColor;
     }
   }
 
-  &__icon {
-    fill: $dark-grey;
-    margin-right: 10px;
+  &__input:focus + &__button {
+    background-color: rgba(61, 64, 80, 0.85);
+    color: $white;
   }
 
-  &__input {
-    // у тебя же есть visually-hidden, зачем дублировать? можно заинклудить тут, лиюо дать класс в разметке
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+  &__caption {
+    $fz: 15;
+    font-family: $font-family;
+    font-size: em($fz, $fz_base);
+    line-height: em(18, $fz);
+    color: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+
+    @media (max-width: $media_large) {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      line-height: em(16, $fz);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: em(10, $fz);
+    width: em(17, $fz);
+    height: em(20, $fz);
   }
 }

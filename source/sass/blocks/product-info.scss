@@ -1,120 +1,96 @@
 .product-info {
   min-height: em(750, $fz);
-  // сократить
-  background-image: url("../../img/back-sec1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  // цвет текста лучше тут
-  background-color: $back-info;
-  // лучше не задавать лишние стили
-  padding: em(107 0 103 0, $fz);
+  background: url("../../img/back-sec1.jpg") center center / cover no-repeat $back_info;
+  color: $black;
+  padding-top: em(107, $fz);
+  padding-bottom: em(103, $fz);
 
-  @media (max-width: $mediaLarge) {
+  @media (max-width: $media_large) {
     min-height: em(500, $fz);
-    padding: em(80 0 80 0, $fz);
+    padding-top: em(80, $fz);
+    padding-bottom: em(80, $fz);
   }
 
-  @media (max-width: $mediaMedium) {
+  @media (max-width: $media_medium) {
     min-height: em(300, $fz);
-    padding: em(50 0 50 0, $fz);
+    padding-top: em(50, $fz);
+    padding-bottom: em(50, $fz);
   }
 
+  &__container {
+    max-width: em(780, $fz);
+
+    @media (max-width: $media_large) {
+      max-width: em(555, $fz);
+    }
+
+    @media (max-width: $media_medium) {
+      max-width: em(345, $fz);
+    }
+  }
 
   &__title {
     $fz: 48;
-    // зач?
-    display: block;
-    font-weight: 700;
-
-    // наследовать
-    color: $black;
     font-size: em($fz, $fz_base);
     line-height: em(58, $fz);
+    font-weight: 700;
+    color: inherit;
     text-transform: uppercase;
-    // дубль
-    margin: 0;
     margin-bottom: em(90, $fz);
-    // общему блоку, а не каждому
-    max-width: em(780, $fz);
 
-    @media (max-width: $mediaLarge) {
+    @media (max-width: $media_large) {
       $fz: 30;
       font-size: em($fz, $fz_base);
       line-height: em(40, $fz);
-      max-width: em(555, $fz);
       margin-bottom: em(50, $fz);
     }
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       $fz: 22;
       font-size: em($fz, $fz_base);
       line-height: em(30, $fz);
-      max-width: em(350, $fz);
+      margin-bottom: em(30, $fz);
+    }
+  }
+
+  &__list {
+    margin-bottom: em(78, $fz);
+
+    @media (max-width: $media_medium) {
       margin-bottom: em(30, $fz);
     }
   }
 
   &__subtitle {
     $fz: 20;
-    // ?
-    display: block;
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
     font-weight: 700;
-    margin: 0;
     margin-bottom: em(10, $fz);
-    max-width: em(780, $fz);
 
-    @media (max-width: $mediaLarge) {
+    @media (max-width: $media_large) {
       $fz: 18;
       font-size: em($fz, $fz_base);
       line-height: em(22, $fz);
-      max-width: em(555, $fz);
     }
 
-    @media (max-width: $mediaMedium) {
-      max-width: em(350, $fz);
+    @media (max-width: $media_medium) {
       margin-bottom: em(20, $fz);
     }
   }
 
-  &__list {
-    // ?
-    display: block;
-    max-width: em(780, $fz);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: em(78, $fz);
-
-    @media (max-width: $mediaLarge) {
-      max-width: em(555, $fz);
-    }
-
-    @media (max-width: $mediaMedium) {
-      max-width: em(300, $fz);
-      margin-bottom: em(30, $fz);
-    }
-  }
-
-  &__text {
+  &__item {
     $fz: 20;
-    // ??
-    font-weight: 400;
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
     text-transform: none;
-    margin: 0;
     margin-bottom: em(5, $fz);
-    padding-left: em(25, $fz);
-    position: relative;
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       margin-bottom: em(8, $fz);
     }
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       $fz: 16;
       font-size: em($fz, $fz_base);
       line-height: em(20, $fz);
@@ -122,74 +98,38 @@
 
     &::before {
       content: "";
-      // Избавиться от абсолютной позиции
-      position: absolute;
       display: inline-block;
       height: em(1, $fz);
       width: em(4, $fz);
-      background: $black;
-      left: em(9, $fz);
-      top: 38%;
+      background: currentColor;
+      vertical-align: middle;
+      margin-right: em(5, $fz);
+      margin-left: em(10, $fz);
     }
   }
 
-  &__button-order {
-    // дубль стилей
-    $fz: 13px;
-    font-size: em($fz, $fz_base);
-    line-height: em(17, $fz);
-    // это лишнее
-    padding: em(11 31 10 31, $fz);
-    min-width: em(183, $fz);
-
-    @media (max-width: $mediaMedium) {
-      min-width: em(150, $fz);
-    }
-  }
-
-  &__details {
-    // вынести в модификатор .btn с какой-нибудь темой
-    // убрать отсюда лишнее и объединить селекторы
-    $fz: 13px;
-    font-size: em($fz, $fz_base);
-    line-height: em(17, $fz);
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: $color-details;
-    text-align: center;
-    background-color: $white;
-    border: 1px solid $border-details;
-    padding: em(11 31 10 31, $fz);
-    min-width: em(183, $fz);
-
-    &:hover, &:focus {
-      background-color: $dark-grey;
-      color: $white;
-      border-color: currentColor;
-    }
-    @media (max-width: $mediaMedium) {
-      min-width: em(150, $fz);
-    }
-  }
-
-  &__button-container {
+  &__buttons {
     display: flex;
     flex-wrap: wrap;
     max-width: em(780, $fz);
-    // плохо поддерживаемое свойство
-    row-gap: em(30, $fz);
-    column-gap: em(30, $fz);
 
-
-    @media (max-width: $mediaLarge) {
+    @media (max-width: $media_large) {
       max-width: em(555, $fz);
     }
 
-    @media (max-width: $mediaMedium) {
+    @media (max-width: $media_medium) {
       max-width: em(350, $fz);
       row-gap: em(15, $fz);
+    }
+  }
+
+  &__button {
+    margin-right: em(30, $fz);
+    margin-bottom: em(30, $fz);
+
+    @media (max-width: $media_medium) {
+      margin-right: em(15, $fz);
+      margin-bottom: em(15, $fz);
     }
   }
 }

@@ -1,175 +1,100 @@
 .select {
-  //fz блокам не даем
-  $fz: 18;
-  // и так задано
-  box-sizing: border-box;
-  position: relative;
-  text-align: start;
-  border-radius: 3px;
-  background-color: $back-input;
-  border: 1px solid $white;
-  color: $dark-grey;
+  background-color: $back_input;
+  border: em(1, $fz) solid $white;
+  color: $dark_gray;
   cursor: pointer;
-  // стиль элемента
-  width: em(370, $fz);
-  min-height: em(48, $fz);
 
-  @media (max-width: $mediaLarge) {
+  @media (max-width: $media_large) {
     $fz: 16;
     font-size: em($fz, $fz_base);
     line-height: em(20, $fz);
-    width: em(300, $fz);
+
   }
 
-  &__box {
-    // fz засунуть поглубже
+  &::after {
+    content: "";
+    display: inline-block;
+    width: em(10, $fz);
+    height: em(10, $fz);
+    vertical-align: middle;
+    border: em(2, $fz) solid transparent;
+    border-top-color: currentColor;
+    border-left-color: currentColor;
+    transform: translateY(-50%) translateX(-50%) rotate(225deg);
+    border-radius: em(2, $fz);
+    transition: all 0.4s;
+    margin-top: em(5, $fz);
+  }
+
+  &__text {
     $fz: 18;
     font-size: em($fz, $fz_base);
-    // зачем флекс?
-    display: flex;
-    // ширину задать равную родителю (100%)
-    width: em(370, $fz);
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
+    line-height: em(22, $fz);
+    text-align: start;
+    color: inherit;
+    width: 100%;
 
-    @media (max-width: $mediaLarge) {
-      $fz: 14;
+    @media (max-width: $media_large) {
+      $fz: 16;
       font-size: em($fz, $fz_base);
       line-height: em(20, $fz);
-      width: em(300, $fz);
     }
   }
 
-  // вроде бы лишняя обертка
-  &__options-container{
+  &__options {
+    position: absolute;
     background: rgba(39, 39, 51, 0.9);
-    color: $white;
-    border: 1px solid #3D4050;
+    border: em(1, $fz) solid $back_footer;
     max-height: 0;
     width: 100%;
     opacity: 0;
     transition: all 0.4s;
-    border-radius: 3px;
-    // нахрена?
-    overflow: hidden;
-    // ордер?
-    order: 1;
+    border-radius: $border_radius;
+    z-index: 1;
+
+    &.active {
+      max-height: em(180, $fz);
+      opacity: 1;
+      overflow-y: scroll;
+
+      @media (max-width: $media_large) {
+        max-height: em(150, $fz);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__option {
-    // лишний fz
-    $fz: 18;
     display: flex;
-    // просто 100%?
-    width: em(370, $fz);
+    width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    color: $white;
+    min-height: em(35, $fz);
 
-    @media (max-width: $mediaLarge) {
-      width: em(300, $fz);
+
+    @media (max-width: $media_large) {
+      min-height: em(30, $fz);
     }
+
+    &:hover, &:focus {
+      color: $light_accent;
+    }
+  }
+
+  &__radio {
+    display: none;
   }
 
   &__label {
-    // fz?
-    $fz: 18;
-    min-height: em(30, $fz);
-    width: em(370, $fz);
+    width: 100%;
     cursor: pointer;
     text-align: start;
     padding: em(12 24 0 10, $fz);
-
-    @media (max-width: $mediaLarge) {
-      min-height: em(25, $fz);
-    }
   }
-
-  &::before {
-    content: "";
-    display: block;
-    // опечатки
-    width: em(10, $fz);;
-    height: em(10, $fz);;
-    // избавиться
-    position: absolute;
-    right: em(15, $fz);;
-    top: 45%;
-    border: 2px solid transparent;
-    border-top-color: currentColor;
-    border-left-color: currentColor;
-    transform: translateY(-50%) translateX(-50%) rotate(225deg);
-    border-radius: 2px;
-    transition: all 0.4s;
-  }
-
-  // дубль
-  &:focus {
-    background-color: rgba(61, 64, 80, 0.85);
-    color: $white;
-    border: none;
-  }
-}
-
-// перенести внутрь
-// каскады, скорее всего, не нужны.
-.select__box .select__option {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  cursor: pointer;
-}
-
-.select__box .select__option:hover {
-  // в переменную
-  color: #42A9ED;
-}
-
-// всему дать классы и перенести внутрь, без каскадов
-.select__box .select__option .radio {
-  display: none;
-}
-
-.select__options-container.active {
-  // fz убрать нахрен везде где нет font-size: em($fz, $fz_base);
-  $fz: 18;
-  max-height: em(180, $fz);
-  opacity: 1;
-  overflow-y: scroll;
-  @media (max-width: $mediaLarge) {
-    $fz: 16;
-    max-height: em(150, $fz);
-  }
-}
-
-.select__options-container::-webkit-scrollbar {
-  display: none;
-}
-
-// завернуть в scoped-класс (.s-select-simplebar)
-.simplebar-track.simplebar-vertical {
-  $fz: 18;
-  width: em(7, $fz);
-  background: #3D4050;
-  // em?
-  border-radius: 3px;
-  margin-top: 2px;
-  margin-bottom: 3px;
-  margin-right: 4px;
-}
-
-.simplebar-scrollbar:before {
-  // переменная
-  background: #3E9CDC;
-  border-radius: 3px;
-  left: 0;
-  right: 0;
-}
-
-.simplebar-scrollbar.simplebar-visible:before {
-  opacity: 1;
-}
-
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-  top: 0;
-  bottom: 0;
 }

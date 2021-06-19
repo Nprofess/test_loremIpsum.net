@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "editorconfig": "editorconfig",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "stylelint": "stylelint-config-airbnb \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint-config-airbnb",
     "build": "gulp build",
     "start": "gulp"
   },

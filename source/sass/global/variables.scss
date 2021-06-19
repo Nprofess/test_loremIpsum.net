@@ -1,32 +1,35 @@
-// стиль написания переменных
+// font
 $fz_base: 16;
 $fz: $fz_base;
+$font-family: "Lato", sans-serif;
 
 
-// Color
+// color
 $black: #000000;
 $accent: #3E9CDC;
 $white: #FFFFFF;
-$dark-grey: #272733;
+$dark_gray: #272733;
 $border: #286690;
-$back-input: rgba(255, 255, 255, 0.85);
+$back_input: rgba(255, 255, 255, 0.85);
 $range: rgba(66, 169, 237, 1);
-$back-header: #10101D;
-$back-footer: #3D4050;
-$back-info:  rgba(242, 242, 242, 1);
-$link-is-active: #43ABF0;
-$color-details:#2A2B30;
-$border-details:#6F6D7B;
-$small-text:#BBBBBB;
-$color-range:rgba(255, 255, 255, 0.7);
-$control-range: #42A9ED;
-$color-pay: #C3C3C3;
+$back_header: #10101D;
+$back_footer: #3D4050;
+$back_info:  rgba(242, 242, 242, 1);
+$link_is_active: #43ABF0;
+$color_details:#2A2B30;
+$border_details:#6F6D7B;
+$small_text:#BBBBBB;
+$color_range:rgba(255, 255, 255, 0.7);
+$light_accent: #42A9ED;
+$color_pay: #C3C3C3;
 
 
-//Sizes
-$mediaLargeContainer: 1172px;
-$mediaLarge: 1230px;
-$mediaMedium:768px;
-$mediaSmall: 500px;
+//sizes
+$media_large_container: 1172px;
+$media_large: 1230px;
+$media_medium:768px;
+$media_small: 490px;
+
+$border_radius: 3px;
 
 
