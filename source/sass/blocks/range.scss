@@ -1,6 +1,8 @@
+// ?
 .range {
   display: flex;
   flex-direction: column;
+  // ?
   grid-column: span 2;
 
   &__text-container {
@@ -25,6 +27,7 @@
 
   &__text {
     @media (max-width: $media_small) {
+    // ?
     max-width: em(230, $fz);
     }
   }

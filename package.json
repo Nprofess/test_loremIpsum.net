@@ -39,7 +39,6 @@
     "postcss": "^8.3.0",
     "postcss-csso": "^5.0.1",
     "stylelint": "^13.13.1",
-    "stylelint-config-airbnb": "^0.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0"
   },
