@@ -4,3 +4,4 @@
 *.pdf
 *.psd
 node_modules
+.vscode
