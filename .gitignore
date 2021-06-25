@@ -1,9 +1,6 @@
-node_modules
 .idea
-.vscode
 *.ai
 *.log
 *.pdf
 *.psd
 node_modules
-
