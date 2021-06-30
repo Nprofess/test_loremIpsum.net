@@ -5,23 +5,21 @@
 
   &__items {
     display: grid;
+    align-items: center;
+    justify-content: start;
     grid-template-columns: repeat(auto-fill, minmax(#{em(370, $fz)}, 1fr));
     gap: em(30, $fz);
-    justify-content: start;
-    align-items: center;
 
     @media (max-width: $media_large) {
-      grid-template-columns: repeat(auto-fill, minmax(#{em(300, $fz)}, 1fr));
       justify-content: center;
+      grid-template-columns: repeat(auto-fill, minmax(#{em(300, $fz)}, 1fr));
     }
-
     @media (max-width: $media_medium) {
       grid-template-columns: 1fr;
     }
   }
 
   &__range-attach {
-
     @media (max-width: $media_large) {
       grid-template-columns: 1fr;
       column-gap: 0;
@@ -36,167 +34,66 @@
       grid-column: 1/3;
       width: 100%;
     }
-
     @media (max-width: $media_medium) {
       grid-column: 1/2;
     }
   }
 
-  // ?
   &__input {
+    $fz: 18;
+    width: 100%;
+    min-height: em(48, $fz);
+
     display: flex;
     align-items: center;
-    width: 100%;
     padding: em(10, $fz);
-    color: $dark_gray;
-    background-color: $back_input;
     border: em(1, $fz) solid $white;
-    min-height: em(48, $fz);
     border-radius: $border_radius;
+    background-color: $back_input;
+    color: $dark_gray;
+    font-family: $font_family;
+    font-size: em($fz, $fz_base);
+    line-height: em(22, $fz);
+
+    @media (max-width: $media_large) {
+      $fz: 16;
+      font-size: em($fz, $fz_base);
+      line-height: em(20, $fz);
+    }
 
     &::placeholder {
-      $fz: 18;
-      font-size: em($fz, $fz_base);
-      line-height: em(22, $fz);
-      font-family: $font-family;
       color: inherit;
-
-      @media (max-width: $media_large) {
-        $fz: 16;
-        font-size: em($fz, $fz_base);
-        line-height: em(20, $fz);
-      }
     }
 
     &:focus {
+      outline: none;
+      border: 0;
       background-color: rgba(61, 64, 80, 0.85);
       color: $white;
-      border: none;
-      outline: none;
 
       &::placeholder {
-        color: $white;
+        color: inherit;
       }
     }
   }
 
-  &__input-range {
-    $fz: 18;
-    font-size: em($fz, $fz_base);
-    -webkit-appearance: none;
+  &__attach-file {
     width: 100%;
-    background: transparent;
 
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &::-ms-track {
-      width: 100%;
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-
-    &::-webkit-slider-runnable-track {
-      position: relative;
-      width: 100%;
-      height: em(6, $fz);
-      background: $color_range;
-      border: em(1, $fz) solid $white;
-      margin-top: em(20, $fz);
-      border-radius: $border_radius;
-    }
-
-    &:focus::-webkit-slider-runnable-track {
-      background: $dark_gray;
-      border-color: $white;
-    }
-
-    &::-moz-range-track {
-      position: relative;
-      width: 100%;
-      height: em(6, $fz);
-      background: $color_range;
-      border: em(1, $fz) solid $white;
-      margin-top: em(20, $fz);
-      border-radius: $border_radius;
-    }
-
-    &::-ms-track {
-      width: 100%;
-      height: em(6, $fz);
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      border-width: em(1, $fz) 0;
-      color: transparent;
-      margin-top: em(20, $fz);
-    }
-
-    &::-ms-fill-lower {
-      background: $color_range;
-      border: em(1, $fz) solid $white;
-      border-radius: $border_radius;
-    }
-
-    &:focus::-ms-fill-lower {
-      background: $dark_gray;
-      border-color: $white;
-    }
-
-    &::-ms-fill-upper {
-      background: $color_range;
-      border: em(1, $fz) solid $white;
-      margin-top: em(20, $fz);
-    }
-
-    &:focus::-ms-fill-upper {
-      background: $dark_gray;
-      border-color: $white;
-    }
-
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: em(26, $fz);
-      height: em(26, $fz);
-
-      border-radius: 50%;
-      background: $light_accent;
-      border: em(3, $fz) solid $border;
-      cursor: pointer;
-      margin-top: em(-12, $fz);
-    }
-
-    &::-moz-range-thumb {
-      -webkit-appearance: none;
-      width: em(24, $fz);
-      height: em(24, $fz);
-      border-radius: 50%;
-      background: $light_accent;
-      border: em(3, $fz) solid $border;
-      cursor: pointer;
-      margin-top: em(-12, $fz);
-    }
-
-    &::-ms-thumb {
-      -webkit-appearance: none;
-      width: em(24, $fz);
-      height: em(24, $fz);
-      border-radius: 50%;
-      background: $light_accent;
-      border: em(3, $fz) solid $border;
-      cursor: pointer;
-      margin-top: em(-12, $fz);
-    }
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  &__container {
+  &__submit {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__fields {
     margin-bottom: em(50, $fz);
+  }
+
+  &__range {
+    grid-column: span 2;
   }
 }

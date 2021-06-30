@@ -1,19 +1,19 @@
 .page {
   min-width: em(320, $fz);
-  font-family: $font-family;
-  color: $black;
   background-color: $white;
+  color: $black;
+  font-family: $font_family;
 
   &__header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
-    background-color: $back_header;
-    color: $white;
-    // ?
-    min-height: em(100, $fz);
+    width: 100%;
 
-    // ?
+    min-height: em(100, $fz);
+    background-color: rgba($back_header, 0.9);
+    color: $white;
+
     @media (max-width: $media_medium) {
       min-height: em(70, $fz);
     }
@@ -22,13 +22,13 @@
 
 .page-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   &__logo {
+    flex: none;
     width: em(247, $fz);
     height: em(35, $fz);
-    flex: none;
   }
 }
 

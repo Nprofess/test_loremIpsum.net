@@ -1,19 +1,21 @@
 .product-info {
-  min-height: em(750, $fz);
-  background: url("../../img/back-sec1.jpg") center center / cover no-repeat $back_info;
+  min-height: em(850, $fz);
+
+  padding-top: em(203, $fz);
+  padding-bottom: em(203, $fz);
+  background: url('../../img/back-sec.jpg') center center / cover no-repeat $back_info;
   color: $black;
-  padding-top: em(107, $fz);
-  padding-bottom: em(103, $fz);
 
   @media (max-width: $media_large) {
     min-height: em(500, $fz);
-    padding-top: em(80, $fz);
+
+    padding-top: em(180, $fz);
     padding-bottom: em(80, $fz);
   }
-
   @media (max-width: $media_medium) {
     min-height: em(300, $fz);
-    padding-top: em(50, $fz);
+
+    padding-top: em(120, $fz);
     padding-bottom: em(50, $fz);
   }
 
@@ -23,7 +25,6 @@
     @media (max-width: $media_large) {
       max-width: em(555, $fz);
     }
-
     @media (max-width: $media_medium) {
       max-width: em(345, $fz);
     }
@@ -31,26 +32,23 @@
 
   &__title {
     $fz: 48;
-    font-size: em($fz, $fz_base);
-    line-height: em(58, $fz);
-    font-weight: 700;
-    // ?
-    color: inherit;
-    text-transform: uppercase;
     margin-bottom: em(90, $fz);
+    text-transform: uppercase;
+    font-size: em($fz, $fz_base);
+    font-weight: 700;
+    line-height: em(58, $fz);
 
     @media (max-width: $media_large) {
       $fz: 30;
+      margin-bottom: em(50, $fz);
       font-size: em($fz, $fz_base);
       line-height: em(40, $fz);
-      margin-bottom: em(50, $fz);
     }
-
     @media (max-width: $media_medium) {
       $fz: 22;
+      margin-bottom: em(30, $fz);
       font-size: em($fz, $fz_base);
       line-height: em(30, $fz);
-      margin-bottom: em(30, $fz);
     }
   }
 
@@ -64,17 +62,16 @@
 
   &__subtitle {
     $fz: 20;
-    font-size: em($fz, $fz_base);
-    line-height: em(24, $fz);
-    font-weight: 700;
     margin-bottom: em(10, $fz);
+    font-size: em($fz, $fz_base);
+    font-weight: 700;
+    line-height: em(24, $fz);
 
     @media (max-width: $media_large) {
       $fz: 18;
       font-size: em($fz, $fz_base);
       line-height: em(22, $fz);
     }
-
     @media (max-width: $media_medium) {
       margin-bottom: em(20, $fz);
     }
@@ -82,16 +79,13 @@
 
   &__item {
     $fz: 20;
+    margin-bottom: em(5, $fz);
     font-size: em($fz, $fz_base);
     line-height: em(24, $fz);
-    // ?
-    text-transform: none;
-    margin-bottom: em(5, $fz);
 
     @media (max-width: $media_medium) {
       margin-bottom: em(8, $fz);
     }
-
     @media (max-width: $media_medium) {
       $fz: 16;
       font-size: em($fz, $fz_base);
@@ -99,30 +93,30 @@
     }
 
     &::before {
-      content: "";
-      display: inline-block;
-      height: em(1, $fz);
       width: em(4, $fz);
-      background: currentColor;
-      vertical-align: middle;
+      height: em(1, $fz);
       margin-right: em(5, $fz);
       margin-left: em(10, $fz);
+
+      content: '';
+
+      display: inline-block;
+      vertical-align: middle;
+      background: currentColor;
     }
   }
 
   &__buttons {
+    max-width: em(780, $fz);
+
     display: flex;
     flex-wrap: wrap;
-    max-width: em(780, $fz);
 
     @media (max-width: $media_large) {
       max-width: em(555, $fz);
     }
-
     @media (max-width: $media_medium) {
       max-width: em(350, $fz);
-      // ?
-      row-gap: em(15, $fz);
     }
   }
 

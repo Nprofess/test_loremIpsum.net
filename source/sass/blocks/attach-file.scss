@@ -1,26 +1,26 @@
 .attach-file {
   &__button {
-    display: grid;
-    grid-template-columns: max-content auto;
     min-height: em(48, $fz);
-    background-color: $white;
-    padding: em(5, $fz);
+
+    cursor: pointer;
+
+    display: grid;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    border: em(2, $fz) solid #3e9cdc;
+    grid-template-columns: max-content auto;
+    column-gap: em(10, $fz);
+    padding: em(5, $fz);
+    border: em(2, $fz) solid $accent;
     border-radius: $border_radius;
+    background-color: $white;
     color: $dark_gray;
-    margin-left: auto;
-    margin-right: auto;
 
     @media (max-width: $media_large) {
       min-height: em(45, $fz);
-      max-width: 70%;
     }
-
     @media (max-width: $media_medium) {
       min-height: em(40, $fz);
+
       padding: em(8 6, $fz);
     }
 
@@ -41,13 +41,13 @@
 
   &__caption {
     $fz: 15;
-    font-family: $font-family;
-    font-size: em($fz, $fz_base);
-    line-height: em(18, $fz);
     color: inherit;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
+    font-family: $font_family;
+    font-size: em($fz, $fz_base);
     font-weight: 600;
+    line-height: em(18, $fz);
 
     @media (max-width: $media_large) {
       $fz: 14;
@@ -57,9 +57,8 @@
   }
 
   &__icon {
-    fill: currentColor;
-    margin-right: em(10, $fz);
     width: em(17, $fz);
     height: em(20, $fz);
+    fill: currentColor;
   }
 }

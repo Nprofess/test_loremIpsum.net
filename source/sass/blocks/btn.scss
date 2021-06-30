@@ -1,54 +1,63 @@
 .btn {
+  $self: &;
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: em(43, $fz);
-  cursor: pointer;
+  border-radius: em(4, $fz);
 
   @media (max-width: $media_large) {
     min-height: em(38, $fz);
   }
 
   &__caption {
-    font-family: $font-family;
     $fz: 13;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
     text-align: center;
     text-transform: uppercase;
-  }
+    font-family: $font_family;
+    font-size: em($fz, $fz_base);
+    line-height: em(16, $fz);
 
-  &--theme-accent {
-    color: $white;
-    background-color: $accent;
-    border: em(1, $fz) solid $white;
-    border-radius: em(4, $fz);
-
-    &:hover,
-    &:focus {
-      background-color: $white;
-      color: $accent;
-      border-color: currentColor;
+    #{$self}--size-l & {
+      $fz: 15;
+      font-size: em($fz, $fz_base);
+      font-weight: 600;
+      line-height: em(18, $fz);
     }
   }
 
-  &--theme-white {
-    color: $color_details;
-    background-color: $white;
-    border: em(1, $fz) solid $border_details;
-    border-radius: em(4, $fz);
+  &--theme-accent {
+    border: em(1, $fz) solid $white;
+    background-color: $accent;
+    color: $white;
 
     &:hover,
     &:focus {
+      border-color: currentColor;
+      background-color: $white;
+      color: $accent;
+    }
+  }
+
+  &--theme-default {
+    border: em(1, $fz) solid $border_details;
+    background-color: $white;
+    color: $color_details;
+
+    &:hover,
+    &:focus {
+      border-color: currentColor;
       background-color: $dark_gray;
       color: $white;
-      border-color: currentColor;
     }
   }
 
   &--size-m {
-    padding: em(11 31 10 31, $fz);
     min-width: em(183, $fz);
+    min-height: em(43, $fz);
+
+    padding: em(10, $fz);
 
     @media (max-width: $media_medium) {
       min-width: em(150, $fz);
@@ -56,28 +65,16 @@
   }
 
   &--size-l {
-    padding: em(15 18 12, $fz);
     min-width: em(370, $fz);
+    min-height: em(48, $fz);
+
+    padding: em(13, $fz);
 
     @media (max-width: $media_medium) {
-      padding: em(12 15, $fz);
+      padding: em(10, $fz);
     }
-
     @media (max-width: $media_small) {
       min-width: em(200, $fz);
     }
-  }
-
-  //?
-  &__submit {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__submit-caption {
-    $fz: 15;
-    font-weight: 600;
-    font-size: em($fz, $fz_base);
-    line-height: em(18, $fz);
   }
 }

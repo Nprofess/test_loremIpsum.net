@@ -1,26 +1,30 @@
+.s-select-simplebar {
   .simplebar-track.simplebar-vertical {
     $fz: 18;
     width: em(7, $fz);
-    background: $back_footer;
-    border-radius: em(3, $fz);
     margin-top: em(2, $fz);
-    margin-bottom: em(3, $fz);
     margin-right: em(4, $fz);
-  }
+    margin-bottom: em(3, $fz);
 
-  .simplebar-scrollbar:before {
-    background: $accent;
     border-radius: em(3, $fz);
-    left: 0;
-    right: 0;
+    background: $back_footer;
   }
 
-  .simplebar-scrollbar.simplebar-visible:before {
+  .simplebar-scrollbar::before {
+    right: 0;
+    left: 0;
+
+    border-radius: em(3, $fz);
+    background: $accent;
+  }
+
+  .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1;
   }
 
-  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
     top: 0;
     bottom: 0;
   }
+}
 

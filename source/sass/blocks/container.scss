@@ -5,10 +5,10 @@
 
   @media (max-width: $media_large) {
     max-width: em(839, $fz);
-    padding-left: em(15, $fz);
-    padding-right: em(15, $fz);
-  }
 
+    padding-right: em(15, $fz);
+    padding-left: em(15, $fz);
+  }
   @media (max-width: $media_medium) {
     max-width: em(719, $fz);
   }

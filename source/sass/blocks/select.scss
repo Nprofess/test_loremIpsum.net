@@ -1,63 +1,55 @@
 .select {
-  background-color: $back_input;
-  border: em(1, $fz) solid $white;
-  color: $dark_gray;
+  $self: &;
   cursor: pointer;
 
-  @media (max-width: $media_large) {
-    // ?
-    $fz: 16;
-    font-size: em($fz, $fz_base);
-    line-height: em(20, $fz);
-
-  }
-
   &::after {
-    content: "";
-    display: inline-block;
     width: em(10, $fz);
     height: em(10, $fz);
+    margin-top: em(5, $fz);
+    margin-left: auto;
+
+    content: '';
+
+    display: inline-block;
     vertical-align: middle;
     border: em(2, $fz) solid transparent;
+    border-radius: em(2, $fz);
     border-top-color: currentColor;
     border-left-color: currentColor;
     transform: translateY(-50%) translateX(-50%) rotate(225deg);
-    border-radius: em(2, $fz);
     transition: all 0.4s;
-    margin-top: em(5, $fz);
+  }
+
+  &:focus::after {
+    margin-right: em(5, $fz);
+    transform: rotate(45deg);
   }
 
   &__text {
-    $fz: 18;
-    font-size: em($fz, $fz_base);
-    line-height: em(22, $fz);
-    text-align: start;
-    // ?
-    color: inherit;
     width: 100%;
-
-    @media (max-width: $media_large) {
-      $fz: 16;
-      font-size: em($fz, $fz_base);
-      line-height: em(20, $fz);
-    }
+    text-align: start;
   }
 
   &__options {
     position: absolute;
-    background: rgba(39, 39, 51, 0.9);
-    border: em(1, $fz) solid $back_footer;
-    max-height: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.4s;
-    border-radius: $border_radius;
     z-index: 1;
+    width: 100%;
+    max-height: 0;
+
+    opacity: 0;
+
+    border: em(1, $fz) solid $back_footer;
+    border-radius: $border_radius;
+    background: rgba(39, 39, 51, 0.9);
+    transition: all 0.4s;
 
     &.active {
       max-height: em(180, $fz);
+
       opacity: 1;
+
       overflow-y: scroll;
+
 
       @media (max-width: $media_large) {
         max-height: em(150, $fz);
@@ -70,21 +62,23 @@
   }
 
   &__option {
+    min-height: em(35, $fz);
+
+    cursor: pointer;
+
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    cursor: pointer;
     color: $white;
-    min-height: em(35, $fz);
 
 
     @media (max-width: $media_large) {
       min-height: em(30, $fz);
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $light_accent;
     }
   }
@@ -95,8 +89,10 @@
 
   &__label {
     width: 100%;
+
     cursor: pointer;
-    text-align: start;
+
     padding: em(12 24 0 10, $fz);
+    text-align: start;
   }
 }
