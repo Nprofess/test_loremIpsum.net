@@ -1,13 +1,14 @@
 .page-footer {
-  padding-top: em(29, $fz);
-  padding-bottom: em(30, $fz);
   background-color: $back_footer;
   color: $white;
+<<<<<<< Updated upstream
 
   @media (max-width: $media_large) {
     padding-top: em(10, $fz);
     padding-bottom: em(10, $fz);
   }
+=======
+>>>>>>> Stashed changes
 
   &__container {
     display: grid;
@@ -16,9 +17,15 @@
     grid-template-columns: 26% 33% 26%;
     gap: em(82, $fz);
 
+    padding-top: em(30, $fz);
+    padding-bottom: em(30, $fz);
+
     @media (max-width: $media_large) {
       grid-template-columns: 1fr;
       gap: 0;
+
+      padding-top: em(10, $fz);
+      padding-bottom: em(10, $fz);
     }
   }
 
@@ -51,6 +58,7 @@
   }
 }
 
+<<<<<<< Updated upstream
 .copyright {
   &__text {
     $fz: 13;
@@ -72,6 +80,9 @@
 // опять какая то хрень
 .pay,
 .contacts {
+=======
+.page-footer-label {
+>>>>>>> Stashed changes
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -102,6 +113,7 @@
         margin-bottom: em(20, $fz);
       }
     }
+<<<<<<< Updated upstream
 
     &:nth-child(n+2) {
       margin-left: em(35, $fz);
@@ -167,4 +179,15 @@
       height: em(13, $fz);
     }
   }
+=======
+
+    &:nth-child(n+2) {
+      margin-left: em(35, $fz);
+
+      @media (max-width: $media_small) {
+        margin-left: 0;
+      }
+    }
+  }
+>>>>>>> Stashed changes
 }

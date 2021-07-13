@@ -1,3 +1,5 @@
+
+
 (function ($) {
   $(document).ready(() => {
     const toggleMenuBtn = $('.main-nav__toggle');
@@ -17,31 +19,18 @@
   });
 }(jQuery));
 
+$(function() {
+  $('select').selectric();
+});
+
+
+
+
+
+
 const selected = document.querySelector(".select");
 const options = document.querySelector(".select__options");
 const optionsList = document.querySelectorAll(".select__option");
-
-// document.querySelector(".select").onkeydown = function (e) {
-//   if (e.key == " ") {
-//     options.classList.toggle("active");
-//   }
-// };
-
-// document.querySelector(".select__option").onkeydown = function (e) {
-//   if (e.key == "Enter") {
-//     selected.innerHTML = o.querySelector("label").innerHTML;
-//     options.classList.remove("active");
-//   }
-// };
-
-// optionsList.forEach(o => {
-//   o.onkeydown = function (e) {
-//     if (e.key == "Enter") {
-//     selected.innerHTML = o.querySelector("label").innerHTML;
-//     options.classList.remove("active");
-//     }
-//   }});
-
 
 selected.addEventListener("click", () => {
   options.classList.toggle("active");
@@ -77,4 +66,7 @@ function rangeValue() {
   const rng = document.getElementById("range");
   const span = document.getElementById("range-value");
   span.innerHTML = rng.value;
-};
+}
+
+
+

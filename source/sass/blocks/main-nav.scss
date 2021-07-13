@@ -7,7 +7,7 @@
   &__container {
     @media (max-width: $media_medium) {
       position: fixed;
-      top: em(68, $fz);
+      top: em(70, $fz);
       right: 0;
       bottom: 0;
       left: 0;
@@ -92,10 +92,6 @@
   position: relative;
   width: em(60, $fz);
   height: em(60, $fz);
-
-  @media (max-width: $media_medium) {
-    width: em(70, $fz);
-  }
 
   &__bar {
     position: absolute;

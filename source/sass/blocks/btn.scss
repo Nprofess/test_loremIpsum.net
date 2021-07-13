@@ -7,10 +7,6 @@
   justify-content: center;
   border-radius: em(4, $fz);
 
-  @media (max-width: $media_large) {
-    min-height: em(38, $fz);
-  }
-
   &__caption {
     $fz: 13;
     text-align: center;
@@ -62,6 +58,9 @@
     @media (max-width: $media_medium) {
       min-width: em(150, $fz);
     }
+    @media (max-width: $media_large) {
+      min-height: em(38, $fz);
+    }
   }
 
   &--size-l {
@@ -70,6 +69,10 @@
 
     padding: em(13, $fz);
 
+
+    @media (max-width: $media_large) {
+      min-height: em(40, $fz);
+    }
     @media (max-width: $media_medium) {
       padding: em(10, $fz);
     }

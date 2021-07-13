@@ -17,7 +17,7 @@ const del = require("del");
 // Styles
 
 const styles = () => {
-  return gulp.src("source/sass/style.scss")
+  return gulp.src("source/sass/style.scss", "source/sass/s-s-selectric.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -25,13 +25,14 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("style.min.css"))
+    .pipe(rename("style.min.css", "s-selectric.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
 
 // HTML
 
@@ -86,7 +87,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "source/sass/simplebar.min.css",
+    "source/sass/**/*.css",
     // "source/*.webmanifest",
     // "!source/img/sprite/*.svg",
   ], {
