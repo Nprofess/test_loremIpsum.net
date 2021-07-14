@@ -1,14 +1,6 @@
 .page-footer {
   background-color: $back_footer;
   color: $white;
-<<<<<<< Updated upstream
-
-  @media (max-width: $media_large) {
-    padding-top: em(10, $fz);
-    padding-bottom: em(10, $fz);
-  }
-=======
->>>>>>> Stashed changes
 
   &__container {
     display: grid;
@@ -58,31 +50,7 @@
   }
 }
 
-<<<<<<< Updated upstream
-.copyright {
-  &__text {
-    $fz: 13;
-    display: block;
-    text-align: center;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-
-    @media (max-width: $media_large) {
-      padding: em(20 10, $fz);
-    }
-  }
-
-  &__uppercase {
-    text-transform: uppercase;
-  }
-}
-
-// опять какая то хрень
-.pay,
-.contacts {
-=======
 .page-footer-label {
->>>>>>> Stashed changes
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -113,73 +81,6 @@
         margin-bottom: em(20, $fz);
       }
     }
-<<<<<<< Updated upstream
-
-    &:nth-child(n+2) {
-      margin-left: em(35, $fz);
-    }
-  }
-}
-
-.pay {
-  &__text {
-    $fz: 13;
-    align-self: end;
-    color: $color_pay;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-  }
-
-  &__icon {
-    &--qiwi {
-      width: em(20, $fz);
-      height: em(20, $fz);
-    }
-
-    &--yandex-money {
-      width: em(18, $fz);
-      height: em(18, $fz);
-    }
-
-    &--web-money {
-      width: em(18, $fz);
-      height: em(17, $fz);
-    }
-  }
-}
-
-.contacts {
-  $self: &;
-
-  &__link {
-    &:hover {
-      color: $accent;
-
-      #{$self}__icon {
-        fill: $white;
-      }
-    }
-  }
-
-  &__link-caption {
-    $fz: 13;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-    word-break: break-all;
-  }
-
-  &__icon {
-    &--mail {
-      width: em(15, $fz);
-      height: em(12, $fz);
-    }
-
-    &--vk {
-      width: em(10, $fz);
-      height: em(13, $fz);
-    }
-  }
-=======
 
     &:nth-child(n+2) {
       margin-left: em(35, $fz);
@@ -189,5 +90,4 @@
       }
     }
   }
->>>>>>> Stashed changes
 }

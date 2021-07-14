@@ -1,44 +1,6 @@
 .page {
   min-width: em(320, $fz);
-<<<<<<< Updated upstream
-=======
-  font-family: $font-family;
-  color: $black;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
   background-color: $white;
   color: $black;
-  font-family: $font_family;
-
-  &__header {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-
-    min-height: em(100, $fz);
-    background-color: rgba($back_header, 0.9);
-    color: $white;
-
-    @media (max-width: $media_medium) {
-      min-height: em(70, $fz);
-    }
-  }
+  font-family: $font-family;
 }
-
-.page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__logo {
-    flex: none;
-    width: em(247, $fz);
-    height: em(35, $fz);
-  }
-}
-
-=======
-  font-family: $font_family;
-}
->>>>>>> Stashed changes

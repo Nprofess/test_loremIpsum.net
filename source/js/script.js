@@ -1,5 +1,3 @@
-
-
 (function ($) {
   $(document).ready(() => {
     const toggleMenuBtn = $('.main-nav__toggle');
@@ -23,28 +21,6 @@ $(function() {
   $('select').selectric();
 });
 
-
-
-
-
-
-const selected = document.querySelector(".select");
-const options = document.querySelector(".select__options");
-const optionsList = document.querySelectorAll(".select__option");
-
-selected.addEventListener("click", () => {
-  options.classList.toggle("active");
-});
-
-optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    options.classList.remove("active");
-
-  });
-});
-
-
 $(document).ready(function () {
   $(".attach-file__input").change(function () {
     if (this.files[0]) // если выбрали файл
@@ -67,6 +43,3 @@ function rangeValue() {
   const span = document.getElementById("range-value");
   span.innerHTML = rng.value;
 }
-
-
-
