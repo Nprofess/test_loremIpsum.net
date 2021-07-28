@@ -18,7 +18,7 @@
 }(jQuery));
 
 $(function() {
-  $('select').selectric();
+  $('.select-type-program').selectric();
 });
 
 $(document).ready(function () {

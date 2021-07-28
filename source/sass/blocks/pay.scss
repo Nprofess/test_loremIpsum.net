@@ -1,26 +1,5 @@
 .pay {
   &__text {
-    $fz: 13;
-    align-self: end;
     color: $color_pay;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-  }
-
-  &__icon {
-    &--qiwi {
-      width: em(20, $fz);
-      height: em(20, $fz);
-    }
-
-    &--yandex-money {
-      width: em(18, $fz);
-      height: em(18, $fz);
-    }
-
-    &--web-money {
-      width: em(18, $fz);
-      height: em(17, $fz);
-    }
   }
 }

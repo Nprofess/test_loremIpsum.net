@@ -27,10 +27,6 @@
     &:hover {
       background-color: $dark_gray;
       color: $white;
-
-      &__icon {
-        fill: currentColor;
-      }
     }
   }
 
@@ -44,7 +40,6 @@
     color: inherit;
     text-align: center;
     text-transform: uppercase;
-    font-family: $font_family;
     font-size: em($fz, $fz_base);
     font-weight: 600;
     line-height: em(18, $fz);

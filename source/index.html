@@ -118,7 +118,7 @@
             <fieldset class="form__fieldset">
               <ul class="form__items">
                 <li class="form__item form__select s-selectric">
-                  <select class="form__input select-form__input" name="type" id="basic" tabindex="0">
+                  <select class="form__input select-type-program" name="type" id="basic" tabindex="0">
                     <option class="option__name">Выберите тип системы</option>
                     <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
                     <option value="Nemo enim ipsam">Nemo enim ipsam</option>
@@ -183,58 +183,58 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__container container">
-      <!--?-->
-      <div class="page-footer__item copyright">
+  <footer class="footer">
+    <div class="footer__container container">
+
+      <div class="footer__item copyright">
         <span class="copyright__text">© 2018
-          <span class="copyright__uppercase">«LoremIpsum.net»</span> Все права
+          <span class="copyright__domain">«LoremIpsum.net»</span> Все права
           защищены.</span>
       </div>
 
-      <ul class="page-footer__item pay page-footer-label">
-        <li class="pay__item page-footer-label__item">
-          <svg class="pay__icon page-footer-label__icon pay__icon--qiwi" width="20" height="20">
+      <ul class="footer__item pay footer-list">
+        <li class="footer-label">
+          <svg class="footer-label__icon footer-label__icon--qiwi" width="20" height="20">
             <use href="img/sprite.svg#qiwi"></use>
           </svg>
-          <p class="pay__text">Qiwi wallet</p>
+          <p class="footer-label__text pay__text">Qiwi wallet</p>
         </li>
-        <li class="pay__item page-footer-label__item">
-          <svg class="pay__icon page-footer-label__icon pay__icon--yandex-money" width="18" height="18">
+        <li class="footer-label">
+          <svg class="footer-label__icon footer-label__icon--yandex-money" width="18" height="18">
             <use href="img/sprite.svg#yandex_money"></use>
           </svg>
-          <p class="pay__text">Yandex Money</p>
+          <p class="footer-label__text pay__text">Yandex Money</p>
         </li>
-        <li class="pay__item page-footer-label__item">
-          <svg class="pay__icon page-footer-label__icon pay__icon--web-money" width="18" height="17">
+        <li class="footer-label">
+          <svg class="footer-label__icon footer-label__icon--web-money" width="18" height="17">
             <use href="img/sprite.svg#web_money"></use>
           </svg>
-          <p class="pay__text">Web Money</p>
+          <p class="footer-label__text pay__text">Web Money</p>
         </li>
       </ul>
 
-      <div class="page-footer__item contacts page-footer-label">
-          <a class="contacts__item contacts__link page-footer-label__item" href="mailto:info@ipsum228.com">
-            <svg class="contacts__icon contacts__icon--mail page-footer-label__icon" width="17" height="12">
+      <ul class="footer__item contacts footer-list">
+        <li class="footer-item">
+          <a class="footer-label footer-label--link" href="mailto:info@ipsum228.com">
+            <svg class="footer-label__icon footer-label__icon--mail" width="17" height="12">
               <use href="img/sprite.svg#mail"></use>
             </svg>
-            <span class="contacts__link-caption">info@ipsum228.com</span>
+            <span class="footer-label__text">info@ipsum228.com</span>
           </a>
-
-          <a class="contacts__item page-footer-label__item contacts__link" href="#">
-            <svg class="contacts__icon page-footer-label__icon contacts__icon--vk" width="20" height="14">
+        </li>
+        <li class="footer-item">
+          <a class="footer-label footer-label--link" href="#">
+            <svg class="footer-label__icon footer-label__icon--vk" width="20" height="14">
               <use href="img/sprite.svg#vk"></use>
             </svg>
-            <span class="contacts__link-caption">Мы вконтакте</span>
+            <span class="footer-label__text">Мы вконтакте</span>
           </a>
-    </div>
+        </li>
+    </ul>
     </div>
   </footer>
-  <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/script.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
-
+  <script src="js/script.min.js"></script>
 </body>
-
 </html>

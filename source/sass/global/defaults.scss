@@ -29,13 +29,13 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   text-decoration-skip: objects;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
-// :focus {
-//   //outline: none;
-// }
+:focus {
+  //outline: none;
+}
 
 p,
 dd,
@@ -74,8 +74,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  // font-size: inherit;
-  // font-weight: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 audio,
@@ -203,28 +203,28 @@ button::-moz-focus-inner,
   border: none;
 }
 
-// button:-moz-focusring,
-// [type='button']:-moz-focusring,
-// [type='reset']:-moz-focusring,
-// [type='submit']:-moz-focusring {
-//   //outline: none;
-// }
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  //outline: none;
+}
 
 [type='number']::-webkit-inner-spin-button,
 [type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-// [type='search'] {
-//   //outline: none;
-// }
+[type='search'] {
+  //outline: none;
+}
 
 [type='search']::-webkit-search-decoration {
-  appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
-  appearance: none;
+  -webkit-appearance: none;
   font: inherit;
 }
 
@@ -242,8 +242,8 @@ legend {
 }
 
 select {
-  appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -251,7 +251,7 @@ select::-ms-expand {
   display: none;
 }
 
-::input-placeholder {
+::-webkit-input-placeholder {
   opacity: 1;
   color: inherit;
   transition: opacity 0.3s;
@@ -263,19 +263,19 @@ select::-ms-expand {
   transition: opacity 0.3s;
 }
 
-:placeholder {
+:-moz-placeholder {
   opacity: 1;
   color: inherit;
   transition: opacity 0.3s;
 }
 
-:input-placeholder {
+:-ms-input-placeholder {
   opacity: 1;
   color: inherit;
   transition: opacity 0.3s;
 }
 
-:focus::input-placeholder {
+:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
@@ -283,11 +283,11 @@ select::-ms-expand {
   opacity: 0;
 }
 
-:focus:placeholder {
+:focus:-moz-placeholder {
   opacity: 0;
 }
 
-:focus:input-placeholder {
+:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
