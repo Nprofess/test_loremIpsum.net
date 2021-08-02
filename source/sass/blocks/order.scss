@@ -69,7 +69,7 @@
 
 .order-scheme {
   display: grid;
-  align-items: flex-start;
+  align-items: start;
   justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(#{em(234, $fz)}, 1fr));
   row-gap: em(10, $fz);
@@ -158,11 +158,8 @@
   }
 
   &__title {
-    // ?
-    $fz: 16;
     max-width: em(188, $fz);
     text-align: center;
-    font-size: em($fz, $fz_base);
     line-height: em(19, $fz);
 
     @media (max-width: $media_medium) {
