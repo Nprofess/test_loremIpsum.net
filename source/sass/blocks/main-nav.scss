@@ -36,6 +36,7 @@
     align-items: center;
 
     @media (max-width: $media_medium) {
+      // ?
       width: auto;
 
       flex-direction: column;
@@ -51,6 +52,7 @@
       margin-left: em(10, $fz);
     }
     @media (max-width: $media_medium) {
+      // ?
       margin: 0;
     }
   }

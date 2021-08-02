@@ -67,6 +67,7 @@
   }
 }
 
+// ?
 .footer-item {
   &:nth-child(n+2) {
     margin-left: em(35, $fz);
@@ -90,6 +91,7 @@
   grid-template-columns: max-content auto;
   column-gap: em(13, $fz);
 
+  // ?
   &:not(:last-child) {
     @media (max-width: $media_small) {
       margin-bottom: em(20, $fz);
