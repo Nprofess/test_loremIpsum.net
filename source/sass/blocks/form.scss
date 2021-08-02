@@ -72,20 +72,8 @@
     }
   }
 
-  // ?
-  &__range-attach {
-    @media (max-width: $media_large) {
-      grid-template-columns: 1fr;
-      column-gap: 0;
-    }
-  }
-
   &__attach-file {
     width: 100%;
-
-    // ?
-    margin-right: auto;
-    margin-left: auto;
   }
 
   &__submit {

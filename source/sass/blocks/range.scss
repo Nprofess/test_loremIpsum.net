@@ -48,22 +48,18 @@
       outline: none;
 
       &::-ms-fill-upper {
-        border-color: $white;
-        background: $dark_gray;
+        @include range-focus;
       }
 
       &::-webkit-slider-runnable-track {
-        border-color: $white;
-        background: $dark_gray;
+        @include range-focus;
       }
 
       &::-ms-fill-lower {
-        border-color: $white;
-        background: $dark_gray;
+        @include range-focus;
       }
     }
 
-    // ?
     &::-ms-track {
       width: 100%;
       height: em(6, $fz);
@@ -79,25 +75,11 @@
     }
 
     &::-webkit-slider-runnable-track {
-      position: relative;
-      width: 100%;
-      height: em(6, $fz);
-      margin-top: em(20, $fz);
-
-      border: em(1, $fz) solid $white;
-      border-radius: $border_radius;
-      background: $color_range;
+      @include range-track;
     }
 
     &::-moz-range-track {
-      position: relative;
-      width: 100%;
-      height: em(6, $fz);
-      margin-top: em(20, $fz);
-
-      border: em(1, $fz) solid $white;
-      border-radius: $border_radius;
-      background: $color_range;
+      @include range-track;
     }
 
     &::-ms-fill-lower {
@@ -114,43 +96,15 @@
     }
 
     &::-webkit-slider-thumb {
-      width: em(26, $fz);
-      height: em(26, $fz);
-      margin-top: em(-12, $fz);
-
-      cursor: pointer;
-
-      border: em(3, $fz) solid $border;
-
-      border-radius: 50%;
-      background: $light_accent;
-      appearance: none;
+      @include range-thumb;
     }
 
     &::-moz-range-thumb {
-      width: em(24, $fz);
-      height: em(24, $fz);
-      margin-top: em(-12, $fz);
-
-      cursor: pointer;
-
-      border: em(3, $fz) solid $border;
-      border-radius: 50%;
-      background: $light_accent;
-      appearance: none;
+      @include range-thumb;
     }
 
     &::-ms-thumb {
-      width: em(24, $fz);
-      height: em(24, $fz);
-      margin-top: em(-12, $fz);
-
-      cursor: pointer;
-
-      border: em(3, $fz) solid $border;
-      border-radius: 50%;
-      background: $light_accent;
-      appearance: none;
+      @include range-thumb;
     }
   }
 }

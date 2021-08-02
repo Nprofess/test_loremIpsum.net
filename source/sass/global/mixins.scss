@@ -31,4 +31,33 @@
   @return if(length($result) == 1, nth($result, 1), $result);
 }
 
+@mixin range-track {
+  position: relative;
+  width: 100%;
+  height: em(6, $fz);
+  margin-top: em(20, $fz);
+
+  border: em(1, $fz) solid $white;
+  border-radius: $border_radius;
+  background: $color_range;
+}
+
+@mixin range-thumb {
+  width: em(24, $fz);
+  height: em(24, $fz);
+  margin-top: em(-12, $fz);
+
+  cursor: pointer;
+
+  border: em(3, $fz) solid $border;
+  border-radius: 50%;
+  background: $light_accent;
+  appearance: none;
+}
+
+@mixin range-focus {
+  border-color: $white;
+  background: $dark_gray;
+}
+
 

@@ -107,18 +107,8 @@
   }
 
   &__buttons {
-    // ?
-    max-width: em(780, $fz);
-
     display: flex;
     flex-wrap: wrap;
-
-    @media (max-width: $media_large) {
-      max-width: em(555, $fz);
-    }
-    @media (max-width: $media_medium) {
-      max-width: em(350, $fz);
-    }
   }
 
   &__button {
