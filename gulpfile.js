@@ -9,9 +9,6 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-// const imagemin = require("gulp-imagemin");
-// const webp = require("gulp-webp");
-// const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 // Styles
@@ -41,7 +38,6 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 
-
 // Scripts
 
 const scripts = () => {
@@ -65,20 +61,6 @@ const copyImages = () => {
 
 exports.images = copyImages;
 
-
-// Sprite
-
-// const sprite = () => {
-//   return gulp.src("source/img/sprite/*.svg")
-//     .pipe(svgstore({
-//       inlineSvg: true
-//     }))
-//     .pipe(rename("sprite.svg"))
-//     .pipe(gulp.dest("build/img"));
-// }
-
-// exports.sprite = sprite;
-
 // Copy
 
 const copy = (done) => {
@@ -86,8 +68,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "source/sass/simplebar.min.css",
-    // "source/*.webmanifest",
+    "source/sass/**/*.css",
     // "!source/img/sprite/*.svg",
   ], {
     base: "source"
@@ -103,7 +84,6 @@ exports.copy = copy;
 const clean = () => {
   return del("build");
 };
-
 
 // Server
 
@@ -140,7 +120,6 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-
 // Build
 
 const build = gulp.series(
@@ -151,8 +130,6 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    // sprite,
-    // createWebp
   ),
 );
 
@@ -168,8 +145,6 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    // sprite,
-    // createWebp
   ),
   gulp.series(
     server,

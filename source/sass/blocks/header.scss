@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+  min-height: em(100, $fz);
+
+  display: flex;
+  justify-content: center;
+  background-color: $back_header;
+  color: $white;
+
+  @media (max-width: $media_medium) {
+    min-height: em(70, $fz);
+  }
+
+  &__logo {
+    flex: none;
+    width: em(247, $fz);
+    height: em(35, $fz);
+  }
+
+  &__container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

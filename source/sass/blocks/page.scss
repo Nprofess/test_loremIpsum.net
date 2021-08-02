@@ -1,34 +1,6 @@
 .page {
   min-width: em(320, $fz);
-  font-family: $font-family;
-  color: $black;
   background-color: $white;
-
-  &__header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: $back_header;
-    color: $white;
-    // ?
-    min-height: em(100, $fz);
-
-    // ?
-    @media (max-width: $media_medium) {
-      min-height: em(70, $fz);
-    }
-  }
+  color: $black;
+  font-family: $font-family;
 }
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__logo {
-    width: em(247, $fz);
-    height: em(35, $fz);
-    flex: none;
-  }
-}
-

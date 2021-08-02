@@ -1,12 +1,6 @@
-.page-footer {
-  padding-top: em(29, $fz);
-  padding-bottom: em(30, $fz);
+.footer {
   background-color: $back_footer;
-
-  @media (max-width: $media_large) {
-    padding-top: em(10, $fz);
-    padding-bottom: em(10, $fz);
-  }
+  color: $white;
 
   &__container {
     display: grid;
@@ -15,16 +9,22 @@
     grid-template-columns: 26% 33% 26%;
     gap: em(82, $fz);
 
+    padding-top: em(30, $fz);
+    padding-bottom: em(30, $fz);
+
     @media (max-width: $media_large) {
       grid-template-columns: 1fr;
       gap: 0;
+
+      padding-top: em(10, $fz);
+      padding-bottom: em(10, $fz);
     }
   }
 
   &__item {
     position: relative;
     justify-self: center;
-    color: $white;
+    width: 100%;
 
     &:nth-child(3n-2)::before,
     &:nth-child(3n)::before {
@@ -48,39 +48,13 @@
       left: em(-35, $fz);
     }
   }
-
-  // ?
-  &__copyright {
-    @media (max-width: $media_large) {
-      padding: em(20 10, $fz);
-    }
-  }
 }
 
-.copyright {
-  &__text {
-    $fz: 13;
-    display: block;
-    text-align: center;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-  }
-
-  &__uppercase {
-    text-transform: uppercase;
-  }
-}
-
-// опять какая то хрень
-.pay,
-.contacts {
-  // ?
-  width: 100%;
-
+.footer-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (max-width: $media_large) {
     padding: em(20 10, $fz);
@@ -91,36 +65,57 @@
   @media (max-width: $media_small) {
     flex-direction: column;
   }
+}
 
-  &__icon {
-    flex: none;
-    align-self: center;
-    fill: $accent;
+.footer-item {
+  &:nth-child(n+2) {
+    margin-left: em(35, $fz);
+
+    @media (max-width: $media_small) {
+      margin-left: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    @media (max-width: $media_small) {
+      margin-bottom: em(20, $fz);
+    }
   }
 }
 
-.pay {
-  &__item {
-    display: grid;
-    grid-template-columns: max-content auto;
-    column-gap: em(13, $fz);
+.footer-label {
+  $self: &;
 
-    &:nth-child(n):not(:nth-last-child(1)) {
-      @media (max-width: $media_small) {
-        margin-bottom: em(20, $fz);
-      }
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: em(13, $fz);
+
+  &:not(:last-child) {
+    @media (max-width: $media_small) {
+      margin-bottom: em(20, $fz);
+    }
+  }
+
+  &:nth-child(n+2) {
+    margin-left: em(35, $fz);
+
+    @media (max-width: $media_small) {
+      margin-left: 0;
     }
   }
 
   &__text {
     $fz: 13;
-    align-self: flex-end;
-    color: $color_pay;
+    align-self: end;
     font-size: em($fz, $fz_base);
     line-height: em(16, $fz);
+    word-break: break-all;
   }
 
   &__icon {
+    align-self: center;
+    fill: $accent;
+
     &--qiwi {
       width: em(20, $fz);
       height: em(20, $fz);
@@ -131,51 +126,10 @@
       height: em(18, $fz);
     }
 
-    // ?
-    &--yandex-money {
+    &--web-money {
       width: em(18, $fz);
       height: em(17, $fz);
     }
-  }
-}
-
-.contacts {
-  $self: &;
-
-  &__item {
-    // ??
-    &:nth-child(n):not(:nth-last-child(1)) {
-      @media (max-width: $media_small) {
-        margin-bottom: em(20, $fz);
-      }
-    }
-  }
-
-  &__link {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    color: $white;
-
-    // ??
-    &:hover,
-    &:hover #{$self}__icon {
-      color: $accent;
-      fill: $white;
-    }
-  }
-
-  &__link-caption {
-    $fz: 13;
-    // ?
-    color: currentColor;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-    word-break: break-all;
-  }
-
-  &__icon {
-    margin-right: em(13, $fz);
 
     &--mail {
       width: em(15, $fz);
@@ -185,6 +139,16 @@
     &--vk {
       width: em(10, $fz);
       height: em(13, $fz);
+    }
+  }
+
+  &--link {
+    &:hover {
+      color: $accent;
+
+      #{$self}__icon {
+        fill: $white;
+      }
     }
   }
 }

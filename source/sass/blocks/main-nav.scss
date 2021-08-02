@@ -1,23 +1,19 @@
 .main-nav {
   $self: &;
-  display: flex;
-  // ?
-  min-height: em(100, $fz);
-  align-items: center;
 
-  // ?
-  @media (max-width: $media_medium) {
-    min-height: em(80, $fz);
-  }
+  display: flex;
+  align-items: center;
 
   &__container {
     @media (max-width: $media_medium) {
       position: fixed;
-      top: em(68, $fz);
+      top: em(70, $fz);
       right: 0;
       bottom: 0;
       left: 0;
+
       visibility: hidden;
+
       padding-top: em(20, $fz);
       padding-bottom: em(20, $fz);
       overflow: auto;
@@ -26,6 +22,7 @@
 
       #{$self}--is-open & {
         z-index: 200;
+
         visibility: visible;
       }
     }
@@ -33,15 +30,17 @@
 
   &__list {
     min-height: 100%;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
     @media (max-width: $media_medium) {
+      width: auto;
+
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: auto;
     }
   }
 
@@ -51,7 +50,6 @@
     @media (max-width: $media_large) {
       margin-left: em(10, $fz);
     }
-
     @media (max-width: $media_medium) {
       margin: 0;
     }
@@ -59,13 +57,17 @@
 
   &__link {
     $fz: 13;
-    font-size: em($fz, $fz_base);
-    line-height: em(16, $fz);
-    font-weight: 600;
     display: flex;
     align-items: center;
-    text-transform: uppercase;
     padding: em(40 10, $fz);
+    text-transform: uppercase;
+    font-size: em($fz, $fz_base);
+    font-weight: 600;
+    line-height: em(16, $fz);
+
+    @media (max-width: $media_medium) {
+      padding: em(20, $fz);
+    }
 
     &--is-active {
       color: $link_is_active;
@@ -74,10 +76,6 @@
     &:hover,
     &:focus {
       color: $accent;
-    }
-
-    @media (max-width: $media_medium) {
-      padding: em(20, $fz);
     }
   }
 
@@ -95,10 +93,6 @@
   width: em(60, $fz);
   height: em(60, $fz);
 
-  @media (max-width: $media_medium) {
-    width: em(70, $fz);
-  }
-
   &__bar {
     position: absolute;
     top: 50%;
@@ -106,6 +100,7 @@
     width: em(20, $fz);
     height: em(3, $fz);
     margin-top: em(-9, $fz);
+
     border-radius: em(1, $fz);
     background: currentColor;
     transition: all, 0.2s;

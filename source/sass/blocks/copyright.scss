@@ -1,0 +1,17 @@
+.copyright {
+  &__text {
+    $fz: 13;
+    display: block;
+    text-align: center;
+    font-size: em($fz, $fz_base);
+    line-height: em(16, $fz);
+
+    @media (max-width: $media_large) {
+      padding: em(20 10, $fz);
+    }
+  }
+
+  &__domain {
+    text-transform: uppercase;
+  }
+}
